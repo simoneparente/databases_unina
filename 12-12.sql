@@ -1,3 +1,5 @@
+--MARIO PENNA E SIMONE PARENTE MARTONE
+
 CREATE SCHEMA e;
 
 
@@ -43,7 +45,7 @@ INSERT INTO e.Albero(coda)
                (3)
 );
 
-INSERT INTO e.Nodo(codn, coda, label)
+INSERT INTO e.Nodo(codn, coda, label) --nel disegno i numeri dei nodi corrispondono ai label
 (           --albero 1
     values (11,1,1),
            (12,1,2),
