@@ -6,12 +6,9 @@ $$
             SELECT velocitaMAX INTO MAXvelocita FROM v.pcheck WHERE puntocheck = NEW.puntocheck;
 
             IF NEW.velocita > MAXvelocita THEN
-                new.infrazione = TRUE;
-            ELSE
-                new.infrazione = FALSE;
+                UPDATE v.check SET infrazione = TRUE WHERE puntocheck = NEW.puntocheck AND targa = NEW.targa;
             END IF;
             RAISE NOTICE 'Infrazione: %', new.infrazione;
-            UPDATE v.check SET infrazione = new.infrazione WHERE puntocheck = NEW.puntocheck AND targa = NEW.targa;
         RETURN NULL;
         END
 $$  LANGUAGE plpgsql;
@@ -22,4 +19,6 @@ EXECUTE FUNCTION v.setInfraction();
 
 INSERT INTO v.CHECK(puntocheck, targa, velocita, data, tempo)
 values ('prova', '1', 9, '2001-01-01', '00:00:00'); -- non infrangono
+
+INSERT INTO v.CHECK(puntocheck, targa, velocita, data, tempo)
 values ('prova1', '1', 110, '2001-01-01', '00:00:00'); -- infrangono
