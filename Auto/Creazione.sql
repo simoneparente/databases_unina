@@ -1,0 +1,63 @@
+CREATE SCHEMA v;
+
+
+CREATE TABLE v.TARIFFE
+(
+    Ingresso  VARCHAR(10) NOT NULL,
+    Uscita    VARCHAR(10) NOT NULL,
+    KM        INTEGER NOT NULL,
+    Categoria VARCHAR(1) NOT NULL,
+    Costo     DOUBLE PRECISION NOT NULL
+);
+
+CREATE TABLE v.AUTO
+(
+    Targa     VARCHAR(10) NOT NULL,
+    CODFIS    VARCHAR(16) NOT NULL,
+    Categoria VARCHAR(1) NOT NULL,
+    CONSTRAINT PK_AUTO PRIMARY KEY (Targa)
+);
+
+
+CREATE TABLE v.PCHECK
+(
+    PuntoCheck    VARCHAR(10) NOT NULL,
+    VelocitaMax   INTEGER NOT NULL,
+
+    CONSTRAINT PK_PCHECK PRIMARY KEY (PuntoCheck)
+);
+
+CREATE TABLE v.CHECK
+(
+    PuntoCheck VARCHAR(10) NOT NULL,
+    Targa      VARCHAR(10) NOT NULL,
+    Velocita   INTEGER NOT NULL,
+    Data      DATE NOT NULL,
+    Tempo      TIME NOT NULL,
+    Infrazione BOOLEAN,
+
+    CONSTRAINT FK_PCHECK FOREIGN KEY (PuntoCheck) REFERENCES v.PCHECK (PuntoCheck),
+    CONSTRAINT FK_AUTO FOREIGN KEY (Targa) REFERENCES v.AUTO (Targa)
+);
+
+CREATE TABLE v.VIAGGIO
+(
+    CodiceViaggio VARCHAR(10) NOT NULL,
+    Targa         VARCHAR(10) NOT NULL,
+    DataI         DATE NOT NULL,
+    DataF         DATE ,
+    OraI          TIME NOT NULL,
+    OraF          TIME,
+    Ingresso      VARCHAR(10) NOT NULL,
+    Uscita        VARCHAR(10),
+    Tariffa       DOUBLE PRECISION,
+    KM            INTEGER,
+
+    CONSTRAINT PK_VIAGGIO PRIMARY KEY (CodiceViaggio),
+    CONSTRAINT FK_VIAGGIO_AUTO FOREIGN KEY (Targa) REFERENCES v.AUTO (Targa),
+    CONSTRAINT FK_VIAGGIO_PCHECK FOREIGN KEY (Ingresso) REFERENCES v.PCHECK (PuntoCheck),
+    CONSTRAINT FK_VIAGGIO_PCHECK2 FOREIGN KEY (Uscita) REFERENCES v.PCHECK (PuntoCheck),
+    CONSTRAINT CK_VIAGGIO CHECK (DataF > DataI OR (DataF = DataI AND OraF > OraI)),
+    CONSTRAINT CK_VIAGGIO2 CHECK (KM > 0),
+    CONSTRAINT CK_VIAGGIO3 CHECK (Tariffa > 0)
+);
