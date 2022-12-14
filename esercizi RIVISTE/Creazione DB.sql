@@ -9,6 +9,15 @@ CREATE TABLE r.rivista (
     CONSTRAINT pk_rivista PRIMARY KEY (isnn)
 );
 
+
+CREATE TABLE r.fascicolo(
+    CodF varchar(32),
+    isnn varchar(32),
+    numero int,
+    anno int,
+    CONSTRAINT pk_fascicolo PRIMARY KEY (CodF),
+    CONSTRAINT fk_fascicolo_rivista FOREIGN KEY (isnn) REFERENCES r.rivista(isnn)
+);
 CREATE TABLE r.articolo (
     doi varchar(32),
     CodF VARCHAR(32),
@@ -18,16 +27,7 @@ CREATE TABLE r.articolo (
     PagI INTEGER,
     PagF INTEGER,
     CONSTRAINT pk_articolo PRIMARY KEY (doi),
-    CONSTRAINT FK_ARTICOLO_RIVISTA FOREIGN KEY (CodF) REFERENCES r.rivista(isnn)
-);
-
-CREATE TABLE r.fascicolo(
-    CodF varchar(32),
-    isnn varchar(32),
-    numero int,
-    anno int,
-    CONSTRAINT pk_fascicolo PRIMARY KEY (CodF),
-    CONSTRAINT fk_fascicolo_rivista FOREIGN KEY (isnn) REFERENCES r.rivista(isnn)
+    CONSTRAINT FK_ARTICOLO_RIVISTA FOREIGN KEY (CodF) REFERENCES r.fascicolo(CodF)
 );
 CREATE TABLE r.Profilo
 (
