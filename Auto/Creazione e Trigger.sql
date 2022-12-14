@@ -85,7 +85,8 @@ $$
 
             IF NEW.velocita > MAXvelocita THEN
                 UPDATE v.check
-                SET infrazione = TRUE WHERE puntocheck = NEW.puntocheck
+                SET infrazione = TRUE
+                WHERE puntocheck = NEW.puntocheck
                     AND targa = NEW.targa
                     AND velocita=NEW.velocita
                     AND data=NEW.data
@@ -112,12 +113,11 @@ CREATE OR REPLACE FUNCTION v.update_viaggio() RETURNS trigger AS
     DECLARE
     prezzo v.tariffe.costo%TYPE;
     chilometraggio v.viaggio.KM%TYPE;
-    viaggio v.viaggio.codiceviaggio%TYPE:=NEW.codiceviaggio;
 
     BEGIN
         IF (NEW.uscita IS NOT NULL) THEN --quando viene inserita l'uscita
             SELECT T.costo, T.KM         --salvo il prezzo e i km relativi al viaggio
-            INTO prezzo, chilometraggio
+            INTO prezzo, chilometraggio  --INTO NEW.KM, NEW.Tariffa CON BEFORE
         FROM V.AUTO AS A NATURAL JOIN V.viaggio AS V,
              v.tariffe AS T
         WHERE (NEW.uscita=T.uscita)
