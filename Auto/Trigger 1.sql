@@ -8,7 +8,8 @@ $$
 
             IF NEW.velocita > MAXvelocita THEN
                 UPDATE v.check
-                SET infrazione = TRUE WHERE puntocheck = NEW.puntocheck
+                SET infrazione = TRUE
+                WHERE puntocheck = NEW.puntocheck
                     AND targa = NEW.targa
                     AND velocita=NEW.velocita
                     AND data=NEW.data
@@ -28,3 +29,9 @@ values ('prova', '1', 9, '2001-01-01', '00:00:00'); -- non infrangono
 
 INSERT INTO v.CHECK(puntocheck, targa, velocita, data, tempo)
 values ('prova', '1', 110, '2001-01-01', '00:00:10'); -- infrangono
+
+
+
+SELECT codiceviaggio, targa, V.ingresso, V.uscita, tariffa, V.km
+FROM v.viaggio AS V NATURAL JOIN v.AUTO AS A, v.Tariffe AS T
+WHERE T.ingresso=V.ingresso

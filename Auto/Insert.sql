@@ -11,7 +11,7 @@ INSERT INTO v.TARIFFE(ingresso, uscita, km, categoria, costo) values ('ingresso1
                                                                      ('ingresso2_cat1','uscita2_cat1', 20, 1, 11),
                                                                      ('ingresso2_cat2','uscita2_cat2', 20, 2, 22);
 
-INSERT INTO v.VIAGGIO(km, tariffa, codiceviaggio, ingresso, datai, targa, orai) values (null, null, 1, 'prova', '2001-01-01', 1, '00:00');
+
 
 
 INSERT INTO v.CHECK(puntocheck, targa, velocita, data, tempo) VALUES ('prova', 1, 9, '2001-01-01', '00:30');
@@ -27,3 +27,27 @@ values ('prova', '1', 9, '2001-01-01', '00:00:00'); -- non infrangono
 
 INSERT INTO v.CHECK(puntocheck, targa, velocita, data, tempo)
 values ('prova', '1', 110, '2001-01-01', '00:00:10'); -- infrangono
+
+INSERT INTO v.VIAGGIO(CODICEVIAGGIO, TARGA, DATAI, ORAI, INGRESSO)
+(
+    values (1, 1, '2001-01-01','01:01', 'ingresso1_cat1'),
+           (2, 1, '2001-01-01', '11:11', 'ingresso2_cat1'),
+           (3, 2, '2012-12-12', '12:12', 'ingresso1_cat2'),
+           (4, 2, '2022-12-22', '22:22', 'ingresso2_cat2')
+);
+
+UPDATE v.viaggio
+SET    uscita='uscita1_cat1'
+WHERE codiceviaggio='1';
+
+UPDATE v.viaggio
+SET    uscita='uscita2_cat1'
+WHERE  codiceviaggio='2';
+
+UPDATE v.viaggio
+SET    uscita='uscita1_cat2'
+WHERE codiceviaggio='3';
+
+UPDATE v.viaggio
+SET    uscita='uscita2_cat2'
+WHERE codiceviaggio='4';
