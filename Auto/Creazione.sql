@@ -1,4 +1,4 @@
-DROP SCHEMA v CASCADE;
+--DROP SCHEMA v CASCADE;
 CREATE SCHEMA v;
 
 
@@ -66,7 +66,10 @@ CREATE TABLE v.VIAGGIO
 -----------------------------------------------------------------------------------------------------------------------
 --TRIGGER 1
 /*
- 
+ Si scriva il seguente trigger. Quando viene inserito un
+check per un viaggio si controlla se la velocit`a rilevata è
+superiore alla velocit`a massima. Se è superiore, si pone a TRUE
+ il campo infrazione del CHECK.
  */
 
 CREATE OR REPLACE FUNCTION v.setInfraction() RETURNS trigger AS
