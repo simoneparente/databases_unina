@@ -25,7 +25,7 @@ CREATE OR REPLACE FUNCTION v.update_viaggio() RETURNS trigger AS
             WHERE OLD.codiceviaggio=codiceviaggio;
             --RAISE NOTICE 'Old_Viaggio: %', OLD.codiceviaggio;
         END IF;
-        RETURN NEW;
+        --RETURN NEW;
     EXCEPTION
     WHEN OTHERS THEN
         RAISE EXCEPTION 'Errore';
