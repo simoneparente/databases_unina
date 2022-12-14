@@ -77,3 +77,5 @@ CREATE TABLE r.ParoleChiave
     CONSTRAINT FK_ParoleChiave_ FOREIGN KEY (ISNN) REFERENCES r.rivista(ISNN)
 );
 
+------------------------------------------------------------------------------------------------------------------------
+--Trigger 1
