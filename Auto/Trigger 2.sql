@@ -8,10 +8,11 @@ CREATE OR REPLACE FUNCTION v.update_viaggio() RETURNS trigger AS
     DECLARE
     prezzo v.tariffe.costo%TYPE;
     chilometraggio v.viaggio.KM%TYPE;
+    viaggio v.viaggio.codiceviaggio%TYPE:=NEW.codiceviaggio;
 
     BEGIN
-        IF (NEW.uscita IS NOT NULL) THEN
-            SELECT T.costo, T.KM
+        IF (NEW.uscita IS NOT NULL) THEN --quando viene inserita l'uscita
+            SELECT T.costo, T.KM         --salvo il prezzo e i km relativi al viaggio
             INTO prezzo, chilometraggio
         FROM V.AUTO AS A NATURAL JOIN V.viaggio AS V,
              v.tariffe AS T
@@ -22,10 +23,14 @@ CREATE OR REPLACE FUNCTION v.update_viaggio() RETURNS trigger AS
             UPDATE v.viaggio
             SET km=chilometraggio, tariffa=prezzo
             WHERE OLD.codiceviaggio=codiceviaggio;
-            RAISE NOTICE 'Old_Viaggio: %', OLD.codiceviaggio;
+            --RAISE NOTICE 'Old_Viaggio: %', OLD.codiceviaggio;
         END IF;
         RETURN NEW;
+    EXCEPTION
+    WHEN OTHERS THEN
+        RAISE EXCEPTION 'Errore';
     END
+
     $$
 LANGUAGE plpgsql;
 

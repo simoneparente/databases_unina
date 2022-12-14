@@ -51,3 +51,10 @@ WHERE codiceviaggio='3';
 UPDATE v.viaggio
 SET    uscita='uscita2_cat2'
 WHERE codiceviaggio='4';
+
+UPDATE v.viaggio
+SET    uscita='uscita2_cat2'
+WHERE codiceviaggio='5';
+
+INSERT INTO V.CHECK(puntocheck, targa, velocita, data, tempo)
+values ('prova', '1', 30, '2022-12-14', '12:05');
