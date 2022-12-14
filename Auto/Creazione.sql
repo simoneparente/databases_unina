@@ -1,13 +1,15 @@
+DROP SCHEMA v CASCADE;
 CREATE SCHEMA v;
 
 
 CREATE TABLE v.TARIFFE
 (
-    Ingresso  VARCHAR(10) NOT NULL,
-    Uscita    VARCHAR(10) NOT NULL,
+    Ingresso  VARCHAR(32) NOT NULL,
+    Uscita    VARCHAR(32) NOT NULL,
     KM        INTEGER NOT NULL,
-    Categoria VARCHAR(1) NOT NULL,
-    Costo     DOUBLE PRECISION NOT NULL
+    Categoria INTEGER NOT NULL,
+    Costo     DOUBLE PRECISION NOT NULL,
+    CONSTRAINT PK_TARIFFE PRIMARY KEY (Ingresso, Uscita, Costo)
 );
 
 CREATE TABLE v.AUTO
@@ -62,3 +64,34 @@ CREATE TABLE v.VIAGGIO
     CONSTRAINT CK_VIAGGIO2 CHECK (KM > 0),
     CONSTRAINT CK_VIAGGIO3 CHECK (Tariffa > 0)
 );
+
+-----------------------------------------------------------------------------------------------------------------------
+--TRIGGER 1
+
+CREATE OR REPLACE FUNCTION v.setInfraction() RETURNS trigger AS
+$$
+    DECLARE
+        MAXvelocita v.pcheck.velocitaMAX%TYPE;
+        BEGIN
+            SELECT velocitaMAX INTO MAXvelocita
+                FROM v.pcheck WHERE puntocheck = NEW.puntocheck;
+
+            IF NEW.velocita > MAXvelocita THEN
+                UPDATE v.check
+                SET infrazione = TRUE WHERE puntocheck = NEW.puntocheck
+                    AND targa = NEW.targa
+                    AND velocita=NEW.velocita
+                    AND data=NEW.data
+                    AND tempo=NEW.tempo;
+            END IF;
+            RAISE NOTICE 'Infrazione: %', new.infrazione;
+        RETURN NULL;
+        END
+$$  LANGUAGE plpgsql;
+
+CREATE or REPLACE TRIGGER Infractions AFTER INSERT ON v.check
+FOR  ROW
+EXECUTE PROCEDURE v.setInfraction();
+
+-----------------------------------------------------------------------------------------------------------------------
+--TRIGGER 2
