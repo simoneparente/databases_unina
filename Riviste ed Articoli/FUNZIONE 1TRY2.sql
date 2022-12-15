@@ -1,42 +1,40 @@
 CREATE OR REPLACE PROCEDURE r.funz_1_TRY2(stringa VARCHAR(128))AS
 $$
     DECLARE
-    /*cursore CURSOR FOR
-        SELECT *
-        FROM (r.rivista NATURAL JOIN r.fascicolo F), r.articolo A, r.parolechiave as p
-        WHERE F.codf=a.codf AND p.isnn=rivista.isnn;*/
         recordtabella INTEGER:= (SELECT COUNT (*) FROM r.descrizione);
         cursore CURSOR FOR
-            SELECT parola
+            SELECT parola, doi
                 FROM r.descrizione;
-        paroladamatchare VARCHAR(32);
-        n INTEGER:=0;
+        paroladastringa VARCHAR(32);
+        numeroparolestringa INTEGER:=0;
+        doi r.descrizione.doi%TYPE;
+        prev_doi r.descrizione.doi%TYPE;
         paroladatable r.descrizione.parola%TYPE;
         controllo INTEGER:=0;
 
     BEGIN
         stringa=replace(stringa, '+', '@');
-        n=regexp_count(stringa, '@')+1;
+        numeroparolestringa=regexp_count(stringa, '@')+1;
         RAISE NOTICE 'recordatabella(%)', recordtabella;
 
-         for i IN 1..n LOOP
+         for i IN 1..numeroparolestringa LOOP
             OPEN cursore;
-             paroladamatchare=split_part(stringa, '@', i);
+             paroladastringa=split_part(stringa, '@', i);
+
              FOR j IN 1..recordtabella LOOP
-             FETCH cursore INTO paroladatable;
-             IF(paroladatable=paroladamatchare) THEN
+             FETCH cursore INTO paroladatable, doi;
+             IF(paroladatable=paroladastringa and doi=prev_doi) THEN
                  controllo=controllo+1;
              end if;
-             RAISE NOTICE 'matchare(%)', paroladamatchare;
+             prev_doi=doi;
+             RAISE NOTICE 'matchare(%)', paroladastringa;
              RAISE NOTICE 'query: (%)', paroladatable;
              RAISE NOTICE 'controllo(%)', controllo;
              END LOOP;
              CLOSE cursore;
-            --RAISE NOTICE '(%)', paroladamatchare;
-            --RAISE NOTICE 'query: (%)', paroladatable;
         END LOOP;
     END
 $$
 LANGUAGE plpgsql;
 
-CALL r.funz_1_TRY2('barra2+prova2');
+CALL r.funz_1_TRY2('silvio1+salernitana1+prova2');
