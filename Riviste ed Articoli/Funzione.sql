@@ -17,10 +17,13 @@ FROM ((r.rivista AS R JOIN r.fascicolo AS F ON r.isnn = f.isnn) JOIN r.articolo 
 CREATE OR REPLACE FUNCTION funz_1(stringa VARCHAR(128))  RETURNS  VARCHAR(32) AS
 $$
     DECLARE
-    cursore CURSOR FOR
+    /*cursore CURSOR FOR
         SELECT *
         FROM (r.rivista NATURAL JOIN r.fascicolo F), r.articolo A, r.parolechiave as p
-        WHERE F.codf=a.codf AND p.isnn=rivista.isnn;
+        WHERE F.codf=a.codf AND p.isnn=rivista.isnn;*/
+        cursore CURSOR FOR
+            SELECT parola
+                FROM r.descrizione
         paroladamatchare VARCHAR(32);
         i
     BEGIN
