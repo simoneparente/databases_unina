@@ -35,6 +35,30 @@ VALUES (1),
        (12),
        (13);
 
+INSERT INTO f.foto(codf, uri)
+values (1, 'uri1'),
+       (2,'uri2'),
+       (3,'uri3'),
+       (4,'uri4');
 
+INSERT INTO f.hashtag(parola)
+values ('prova11'),
+       ('prova12'),
+       ('prova13'),
+       ('prova21'),
+       ('prova22'),
+       ('prova23'),
+       ('prova31'),
+       ('prova32');
 
-
+INSERT INTO f.tagfoto(codf, parola)
+values (1,'prova11'),
+       (1,'prova12'),
+       (1,'prova13'),
+       --foto 2
+       (2,'prova21'),
+       (2,'prova22'),
+       (2,'prova23'),
+       --foto 3
+       (3,'prova31'),
+       (3,'prova32');
