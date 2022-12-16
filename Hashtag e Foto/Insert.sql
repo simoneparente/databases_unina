@@ -9,27 +9,26 @@ INSERT INTO F.album(coda, titolo, inalbum)
            (22, 'figlio22', 2);
 
 INSERT INTO f.hashtag(parola)
-values  ('silvio'),
-        ('barra'),
+values  ('caso'),
+        ('prova'),
         ('sei'),
         ('un'),
         ('grande'),
-        ('dio'),
-        ('porco');
+        ('bionda'),
+        ('luigi');
 
 INSERT INTO f.tagalbum(coda, parola)
-values (1,'silvio'),
+values (1,'caso'),
        (1,'grande'),
-       (11,'dio'),
-       (12,'dio'),
-       (13,'silvio'),
+       (11,'bionda'),
+       (12,'bionda'),
+       (13,'caso'),
        --ALBERO 2
-       (2,'dio'),
+       (2,'bionda'),
        (21,'grande'),
-       (22,'silvio'),
-       (22,'porco');
+       (22,'caso'),
+       (22,'luigi');
 
-CREATE TABLE f.temp(coda INTEGER PRIMARY KEY);
 INSERT INTO f.temp(coda)
 VALUES (1),
        (11),
