@@ -1,3 +1,5 @@
+--
+
 CREATE OR REPLACE PROCEDURE r.funz_1_TRY2(stringa VARCHAR(128))AS
 $$
     DECLARE
@@ -14,17 +16,20 @@ $$
 
     BEGIN
         stringa=replace(stringa, '+', '@');
+        RAISE NOTICE 'Stringa: {%}', stringa;
         numeroparolestringa=regexp_count(stringa, '@')+1;
-        RAISE NOTICE 'recordatabella(%)', recordtabella;
+        RAISE NOTICE 'N parole stringa: (%)';
+        RAISE NOTICE 'Recordatabella: (%)', recordtabella;
 
          for i IN 1..numeroparolestringa LOOP
             OPEN cursore;
-             paroladastringa=split_part(stringa, '@', i);
+                paroladastringa=split_part(stringa, '@', i);
+                RAISE NOTICE 'Parola Stringa attuale: {%}', paroladastringa;
 
              FOR j IN 1..recordtabella LOOP
              FETCH cursore INTO paroladatable, doi;
-             IF(paroladatable=paroladastringa and doi=prev_doi) THEN
-                 controllo=controllo+1;
+             RAISE NOTICE 'Parola Table Attuale: {%}', paroladatable
+             IF(paroladatable=paroladastringa) THEN
              end if;
              prev_doi=doi;
              RAISE NOTICE 'matchare(%)', paroladastringa;
