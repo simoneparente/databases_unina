@@ -28,7 +28,7 @@ CREATE TABLE f.album(
 
 CREATE TABLE f.foto (
     Codf SERIAL,
-    Url VARCHAR(100),
+    Uri VARCHAR(100),
     Titolo VARCHAR(50),
     Owner INTEGER,
     CodAlbum INTEGER,
@@ -56,7 +56,8 @@ CREATE TABLE f.visibile(
 
     CONSTRAINT visibile_pk PRIMARY KEY (codprop, codut, coda),
     CONSTRAINT proprietario_fk FOREIGN KEY (codprop) REFERENCES f.utente(codU),
-    CONSTRAINT utente_fk FOREIGN KEY (codut) REFERENCES f.utente(codU)
+    CONSTRAINT utente_fk FOREIGN KEY (codut) REFERENCES f.utente(codU),
+    CONSTRAINT album_fk FOREIGN KEY (coda) REFERENCES f.album(codA)
 );
 
 CREATE TABLE f.log(
@@ -68,4 +69,20 @@ CREATE TABLE f.log(
     CONSTRAINT log_pk PRIMARY KEY (codu, codf, time),
     CONSTRAINT utente_fk FOREIGN KEY (codu) REFERENCES f.utente(codU),
     CONSTRAINT foto_fk FOREIGN KEY (codf) REFERENCES f.foto(codf)
+);
+
+CREATE TABLE f.tagalbum
+(
+    CodA INTEGER,
+    Parola VARCHAR(50),
+
+    CONSTRAINT tagalbum_pk PRIMARY KEY (coda, parola),
+    CONSTRAINT album_fk FOREIGN KEY (coda) REFERENCES f.album(codA),
+    CONSTRAINT hashtag_fk FOREIGN KEY (parola) REFERENCES f.hashtag(parola)
+);
+
+CREATE TABLE f.temp
+(
+    CodA INTEGER,
+    CONSTRAINT PK_temp PRIMARY KEY (CodA)
 );
