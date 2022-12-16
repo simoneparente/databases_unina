@@ -28,7 +28,7 @@ CREATE TABLE f.album(
 
 CREATE TABLE f.foto (
     Codf SERIAL,
-    Url VARCHAR(100),
+    Uri VARCHAR(100),
     Titolo VARCHAR(50),
     Owner INTEGER,
     CodAlbum INTEGER,
