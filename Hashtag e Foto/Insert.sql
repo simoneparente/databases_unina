@@ -62,3 +62,9 @@ values (1,'prova11'),
        --foto 3
        (3,'prova31'),
        (3,'prova32');
+
+INSERT INTO f.hashtag(parola) values ('provatabelle1e3');
+
+INSERT INTO f.tagfoto(codf, parola) VALUES
+                                        (1,'provatabelle1e3'),
+                                        (3,'provatabelle1e3');
