@@ -20,7 +20,10 @@ CREATE OR REPLACE PROCEDURE f.pro(stringa VARCHAR(500))  AS $$
             RAISE NOTICE 'Uri Attuale: {%}', currentURI;
             match = 0;
             FOR j in 1..numParoleSTR LOOP
-                parolaSTR = split_part(parolaSTR, '@', j); --Per quale cazzo di motivo sta variabile di merda non prende valore dio cristo !!!!!!
+                --Per quale cazzo di motivo sta variabile di merda non prende valore dio cristo !!!!!!
+                parolaSTR = split_part(parolaSTR, '@', j);
+                --parolaSTR := split_part(parolaSTR, '@', j);
+                --SELECT split_part(parolaSTR, '@', j) INTO parolaSTR;
                 --parolaSTR = 'provatabelle1e3';
                 RAISE NOTICE 'Parola Attuale Stringa: {%}', parolaSTR;
                 RAISE NOTICE 'j: {%}', j;
