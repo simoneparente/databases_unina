@@ -25,7 +25,6 @@ CREATE OR REPLACE PROCEDURE r.pro(string VARCHAR(500)) AS $$
             FOR j in 1..numParoleSTR LOOP
                 parolaSTR = split_part(string, '@', j);
                 RAISE NOTICE 'Parola Attuale Stringa: {%}', parolaSTR;
-                RAISE NOTICE 'j: {%}', j;
                 IF EXISTS (SELECT *
                            FROM r.descrizione as d
                            WHERE d.doi=currentDOI AND d.parola=parolaSTR) THEN

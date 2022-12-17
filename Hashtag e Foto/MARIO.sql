@@ -21,10 +21,8 @@ CREATE OR REPLACE PROCEDURE f.pro(stringa VARCHAR(500))  AS $$
             match = 0;
             FOR j in 1..numParoleSTR LOOP
                 parolaSTR = split_part(stringa, '@', j);
-                --parolaSTR = 'provatabelle1e3';
                 RAISE NOTICE 'Stringa {%}', stringa;
                 RAISE NOTICE 'Parola Attuale Stringa: {%}', parolaSTR;
-                RAISE NOTICE 'j: {%}', j;
                 IF EXISTS (SELECT *
                            FROM f.tagfoto as T NATURAL JOIN f.foto as F
                            WHERE F.uri=currentURI AND T.parola=parolaSTR) THEN
