@@ -25,6 +25,7 @@ CREATE OR REPLACE PROCEDURE f.pro(stringa VARCHAR(500))  AS $$
                 --parolaSTR = 'provatabelle1e3';
                 RAISE NOTICE 'Stringa {%}', stringa;
                 RAISE NOTICE 'Parola Attuale Stringa: {%}', parolaSTR;
+                RAISE NOTICE 'split_part: {%}', split_part(parolaSTR, '@', j);
                 RAISE NOTICE 'j: {%}', j;
                 IF EXISTS (SELECT *
                            FROM f.tagfoto as T NATURAL JOIN f.foto as F
@@ -47,12 +48,15 @@ CALL f.pro('prova11@prova12@provatabelle1e3');
 
 CALL f.pro('provatabelle1e3');
 
-SELECT split_part('prova11@prova12@provatabelle1e3', '@', 1);
-
+--TEST Query IF
 SELECT *
 FROM f.tagfoto as T NATURAL JOIN f.foto as F
 WHERE F.uri='uri2' AND T.parola='provatabelle1e3';
 
+------------------------------------------------------------------------------------------------------------------------
+--SplitPart TEST
+
+SELECT split_part('prova11@prova12@provatabelle1e3', '@', 1);
 
 --Per quale cazzo di ragione qui funziona?????
 CREATE OR REPLACE PROCEDURE f.test(string VARCHAR(500)) AS $$
