@@ -21,7 +21,6 @@ CREATE OR REPLACE PROCEDURE f.pro(stringa VARCHAR(500))  AS $$
             match = 0;
             FOR j in 1..numParoleSTR LOOP
                 parolaSTR = split_part(stringa, '@', j);
-                RAISE NOTICE 'Stringa {%}', stringa;
                 RAISE NOTICE 'Parola Attuale Stringa: {%}', parolaSTR;
                 IF EXISTS (SELECT *
                            FROM f.tagfoto as T NATURAL JOIN f.foto as F
