@@ -42,4 +42,4 @@ CREATE OR REPLACE PROCEDURE r.pro(string VARCHAR(500)) AS $$
     END;
 $$ LANGUAGE plpgsql;
 
-CALL r.pro('silvio1');
+CALL r.pro('prova2');
