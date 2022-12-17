@@ -23,8 +23,7 @@ CREATE OR REPLACE PROCEDURE r.pro(string VARCHAR(500)) AS $$
             RAISE NOTICE 'DOI Attuale: {%}', currentDOI;
             match=0;
             FOR j in 1..numParoleSTR LOOP
-                parolaSTR = split_part(parolaSTR, '@', j);
-                --parolaSTR = 'silvio1';
+                parolaSTR = split_part(string, '@', j);
                 RAISE NOTICE 'Parola Attuale Stringa: {%}', parolaSTR;
                 RAISE NOTICE 'j: {%}', j;
                 IF EXISTS (SELECT *
