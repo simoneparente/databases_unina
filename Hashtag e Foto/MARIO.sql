@@ -11,8 +11,8 @@ CREATE OR REPLACE PROCEDURE f.pro(stringa VARCHAR(500))  AS $$
     BEGIN
         numParoleSTR = regexp_count(stringa, '@') + 1;
         numURI = (SELECT Count(uri) FROM f.foto);
-        RAISE NOTICE 'Numero Uri: {%}', numURI;
         RAISE NOTICE 'Numero ParoleSTR: {%}', numParoleSTR;
+        RAISE NOTICE 'Numero Uri: {%}', numURI;
         OPEN cursURI;
         FOR i in 1..numURI LOOP
             FETCH cursURI INTO currentURI;

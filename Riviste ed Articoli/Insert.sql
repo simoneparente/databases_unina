@@ -17,5 +17,5 @@ values ('rivista1', 'silvio1'),
 
 --ARTICOLO
 INSERT INTO r.articolo(doi, codf, sommario)
-values --('doi1', 'fascicolo1', 'silvio1 barra2 salernitana1'),
-       --('doi2', 'fascicolo2', 'silvio1 barra2 prova2');
+values ('doi1', 'fascicolo1', 'silvio1 barra2 salernitana1'),
+       ('doi2', 'fascicolo2', 'silvio1 barra2 prova2');
