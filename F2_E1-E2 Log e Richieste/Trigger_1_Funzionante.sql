@@ -16,7 +16,7 @@ AS
                     FROM l.log
                     WHERE codtransazione=NEW.codtransazione);
     operazioniprecedenti CURSOR FOR (
-        SELECT cod
+        SELECT codrisorsa
         FROM l.log
         WHERE codtransazione=NEW.codtransazione
         ORDER BY log.timestamp DESC
@@ -26,8 +26,7 @@ AS
         FOR i IN 1..count LOOP
         FETCH operazioniprecedenti INTO controllo;
         RAISE NOTICE 'controllo{%}', controllo;
-        UPDATE l.risorsa SET valore=l.log.valoreprima
-        WHERE codtransazione=NEW.codtransazione
+        UPDATE l.risorsa SET valore=valoreprima, stato='UNLOCK' FROM l.log WHERE risorsa.codrisorsa=controllo;
         END LOOP;
         RETURN NEW;
     end;
@@ -39,6 +38,7 @@ CREATE OR REPLACE TRIGGER trigger1 BEFORE INSERT OR UPDATE ON l.log
     FOR EACH ROW
     WHEN (NEW.operazione='ABORT')
         EXECUTE FUNCTION l.funzione1();
+UPDATE l.risorsa SET valore=valoreprima FROM l.log WHERE risorsa.codrisorsa=1;
 
 INSERT INTO l.log(cod, operazione, codrisorsa, valoreprima, valoredopo, codtransazione, timestamp)
 values (99, 'ABORT', 4, NULL, NULL, 51, 8);
