@@ -1,4 +1,4 @@
---DROP SCHEMA l CASCADE ;
+DROP SCHEMA l CASCADE ;
 CREATE SCHEMA l;
 
 CREATE TABLE l.risorsa(
@@ -12,7 +12,7 @@ CREATE TABLE l.risorsa(
 
 CREATE TABLE l.richieste(
     CodTransazione INTEGER   ,
-    Tempo TIMESTAMP   ,
+    Tempo INTEGER   ,
     TipoAccesso VARCHAR(50)   ,
     CodRisorsa INTEGER   ,
 
@@ -22,7 +22,7 @@ CREATE TABLE l.richieste(
 
 CREATE TABLE l.assegnazione(
     CodTransazione INTEGER,
-    Tempo TIMESTAMP ,
+    Tempo INTEGER ,
     TipoAccesso VARCHAR(50),
     CodRisorsa INTEGER,
 
@@ -38,9 +38,8 @@ CREATE TABLE l.log(
     ValorePrima VARCHAR(50)  ,
     ValoreDopo VARCHAR(50)  ,
     CodTransazione INTEGER  ,
-    TimeStamp TIMESTAMP  ,
+    TimeStamp INTEGER  ,
 
     CONSTRAINT log_pk PRIMARY KEY (Cod),
-    CONSTRAINT richieste_fk FOREIGN KEY (CodTransazione) REFERENCES l.richieste(CodTransazione),
     CONSTRAINT risorse_fk FOREIGN KEY (CodRisorsa) REFERENCES l.risorsa(CodRisorsa)
 );
