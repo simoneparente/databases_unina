@@ -1,5 +1,5 @@
-DROP SCHEMA l CASCADE ;
-CREATE SCHEMA l;
+-- DROP SCHEMA l CASCADE ;
+-- CREATE SCHEMA l;
 
 CREATE TABLE l.risorsa(
     CodRisorsa INTEGER  ,
@@ -22,7 +22,7 @@ CREATE TABLE l.richieste(
 
 CREATE TABLE l.assegnazione(
     CodTransazione INTEGER,
-    Tempo INTEGER ,
+    Tempo INTEGER,
     TipoAccesso VARCHAR(50),
     CodRisorsa INTEGER,
 
