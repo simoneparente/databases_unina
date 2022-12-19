@@ -4,8 +4,10 @@ CREATE OR REPLACE PROCEDURE f2_figli(tagalbum f.album.coda%TYPE) AS $$
         numFigli INTEGER = (SELECT Count(*) FROM f.album AS A WHERE A.inalbum=tagalbum);
         figlio f.album.coda%TYPE;
     BEGIN
-        FETCH prendiFigli INTO figlio;
+        --FETCH prendiFigli INTO figlio;
         IF numFigli>0 THEN
+            prendiFigli = random_portal_name();
+            OPEN prendiFigli;
             FOR i IN 1..numFigli LOOP
                 FETCH prendiFigli INTO figlio;
                 RAISE NOTICE 'figlio: %', figlio;

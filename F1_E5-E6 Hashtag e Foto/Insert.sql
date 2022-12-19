@@ -39,12 +39,6 @@ values (1,'caso'),
        (22,'caso'),
        (22,'luigi');
 
-INSERT INTO f.temp(coda)
-VALUES (1),
-       (11),
-       (12),
-       (13);
-
 INSERT INTO f.foto(codf, uri)
 values (1, 'uri1'),
        (2,'uri2'),
