@@ -1,32 +1,32 @@
+--START
 CREATE OR REPLACE PROCEDURE f2_figli(tagalbum f.album.coda%TYPE) AS $$
     DECLARE
-        prendiFigli CURSOR FOR (SELECT codA FROM f.album AS A WHERE A.inalbum=tagalbum);
         numFigli INTEGER = (SELECT Count(*) FROM f.album AS A WHERE A.inalbum=tagalbum);
         figlio f.album.coda%TYPE;
     BEGIN
-        --FETCH prendiFigli INTO figlio;
-        IF numFigli>0 THEN
-            prendiFigli = random_portal_name();
-            OPEN prendiFigli;
-            FOR i IN 1..numFigli LOOP
-                FETCH prendiFigli INTO figlio;
-                RAISE NOTICE 'figlio: %', figlio;
-                CALL f2_figli(figlio);
-                INSERT INTO f.tmp(codA) values (figlio);
-            end loop;
-        end if;
+        FOR figlio IN (SELECT codA FROM f.album AS A WHERE A.inalbum=tagalbum) LOOP
+            RAISE NOTICE 'figlio: %', figlio;
+            CALL f2_figli(figlio);
+            INSERT INTO f.tmp(codA) values (figlio);
+        end loop;
+    end
+$$ language plpgsql;
+
+CREATE OR REPLACE PROCEDURE f1_rec(tagalbum f.album.coda%TYPE) AS $$
+    DECLARE
+        Album f.album.coda%TYPE;
+        output VARCHAR(500);
+    BEGIN
+        CREATE TABLE f.tmp(codA INTEGER);
+        INSERT INTO f.tmp VALUES (tagalbum);
+        CALL f2_figli(tagalbum);
+        FOR Album IN (SELECT codA FROM f.tmp) LOOP
+            output = CONCAT(output, ' ', Album);
+        end loop;
+        DROP TABLE f.tmp CASCADE;
+        RAISE NOTICE '-----------';
+        RAISE NOTICE 'Output {%}', output;
     end;
 $$ language plpgsql;
 
-
-CREATE OR REPLACE PROCEDURE f1_rec(tagalbum f.album.tagalbum%TYPE) AS $$
-    DECLARE
-
-    BEGIN
-$$ language plpgsql;
-
-CREATE TABLE f.tmp(
-    codA INTEGER
-);
-
-CALL f2_figli(1);
+CALL f1_rec(1);
