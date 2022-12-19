@@ -1,12 +1,22 @@
 INSERT INTO F.album(coda, titolo, inalbum)
     values (1, 'padre1', null),
-           (11, 'figlio11', 1),
-           (12, 'figlio12', 1),
-           (13, 'figlio13', 1),
+           (11, 'padre1-figlio1', 1),
+           (12, 'padre1-figlio2', 1),
+           (13, 'padre1-figlio3', 1),
+           --ALBUM 11
+           (111, 'padre11-figlio1', 11),
+           (112, 'padre11-figlio2', 11),
+           (113, 'padre11-figlio3', 11),
+           --ALBUM 113
+           (1131, 'padre113-figlio1', 113),
+           --ALBUM 13
+            (131, 'padre13-figlio1', 13),
+            (132, 'padre13-figlio2', 13),
            --ALBUM 2
             (2, 'padre2', null),
-           (21, 'figlio21', 2),
-           (22, 'figlio22', 2);
+           (21, 'padre2-figlio1', 2),
+           (22, 'padre2-figlio2', 2);
+
 
 INSERT INTO f.hashtag(parola)
 values  ('caso'),
@@ -28,12 +38,6 @@ values (1,'caso'),
        (21,'grande'),
        (22,'caso'),
        (22,'luigi');
-
-INSERT INTO f.temp(coda)
-VALUES (1),
-       (11),
-       (12),
-       (13);
 
 INSERT INTO f.foto(codf, uri)
 values (1, 'uri1'),

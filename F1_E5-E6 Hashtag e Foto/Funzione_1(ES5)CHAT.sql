@@ -1,6 +1,6 @@
 CREATE OR REPLACE PROCEDURE get_tags_by_album (p_CodA INTEGER)
-RETURNS TEXT AS
-$BODY$
+AS
+$$
 DECLARE
   -- variabile per memorizzare i tag trovati
   l_tags TEXT;
@@ -23,8 +23,6 @@ BEGIN
     l_tags := l_tags || ' ' || get_tags_by_album(rec.CodA);
   END LOOP;
 
-  -- restituisce i tag trovati
-  RETURN l_tags;
 END;
-$BODY$
+$$
 LANGUAGE plpgsql;

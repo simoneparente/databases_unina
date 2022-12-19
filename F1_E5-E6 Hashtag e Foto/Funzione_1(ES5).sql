@@ -3,7 +3,13 @@ Si scriva una funzione PLSQL che riceve in ingresso l’identificativo
 di un album e che restituisce una stringa contenente tutti i tag associati all’album e agli album in
 esso contenuti (ad ogni livello di profondit`a) senza ripetizioni.
  */
---DROP TABLE f.temp CASCADE;
+INSERT INTO f.temp(coda)
+VALUES (1),
+       (11),
+       (12),
+       (13);
+
+DROP TABLE f.temp CASCADE;
 CREATE OR REPLACE  FUNCTION f.Tag_Associati(input f.album.coda%type)RETURNS VARCHAR(500) AS
 $$
     DECLARE
