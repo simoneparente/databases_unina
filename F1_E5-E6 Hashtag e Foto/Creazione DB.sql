@@ -80,9 +80,3 @@ CREATE TABLE f.tagalbum
     CONSTRAINT album_fk FOREIGN KEY (coda) REFERENCES f.album(codA),
     CONSTRAINT hashtag_fk FOREIGN KEY (parola) REFERENCES f.hashtag(parola)
 );
-
-CREATE TABLE f.temp
-(
-    CodA INTEGER,
-    CONSTRAINT PK_temp PRIMARY KEY (CodA)
-);
