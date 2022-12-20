@@ -10,10 +10,16 @@ create function f.function_1(in codAlbum integer) returns varchar
 as
 $$
 declare
+    string varchar;
     cursor_album_1 cursor for (select inalbum
                                from f.album
                                where codAlbum=coda);
 begin
-    
+    if (not codAlbum) then
+        raise error_in_assignment;
+        return string;
+    end if;
+
+
 end;
 $$;
