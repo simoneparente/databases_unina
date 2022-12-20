@@ -26,8 +26,6 @@ CREATE TABLE l.assegnazione(
     TipoAccesso VARCHAR(50),
     CodRisorsa INTEGER,
 
-    CONSTRAINT PK_assegnazione PRIMARY KEY (CodTransazione),
-    CONSTRAINT FK_assegnazione_richieste FOREIGN KEY (CodTransazione) REFERENCES l.richieste(CodTransazione),
     CONSTRAINT FK_assegnazione_risorsa FOREIGN KEY (CodRisorsa) REFERENCES l.risorsa(CodRisorsa)
 );
 
