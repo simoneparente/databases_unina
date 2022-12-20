@@ -1,4 +1,4 @@
---START
+--ES5 MARIO PENNA
 CREATE OR REPLACE PROCEDURE f.f2_figli(tagalbum f.album.coda%TYPE) AS $$
     DECLARE
         figlio f.album.coda%TYPE;
@@ -12,7 +12,7 @@ CREATE OR REPLACE PROCEDURE f.f2_figli(tagalbum f.album.coda%TYPE) AS $$
     end
 $$ language plpgsql;
 
-CREATE OR REPLACE  FUNCTION f.f1_rec(IN Input f.album.coda%type)RETURNS VARCHAR(500) AS $$
+CREATE OR REPLACE FUNCTION f.f1_rec(IN Input f.album.coda%type)RETURNS VARCHAR(500) AS $$
     DECLARE
         stringa f.tagalbum.parola%TYPE;
         output VARCHAR(500);
