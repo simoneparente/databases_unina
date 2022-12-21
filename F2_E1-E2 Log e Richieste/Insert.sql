@@ -21,4 +21,5 @@ VALUES (21, 'MODIFICA', 1, null, 'valoredopo1', 51, 1),
 
 INSERT INTO l.richieste(codtransazione, tempo, tipoaccesso, codrisorsa)
 VALUES (51, 2, 'accesso1',1),
-       (52, 2, 'accesso2',5);
+       (52, 4, 'accesso2',5),
+       (53, 2, 'accesso3',2);
