@@ -16,3 +16,8 @@ INSERT INTO l.richieste(codtransazione, tempo, tipoaccesso, codrisorsa)
 VALUES (51, 4, 'accesso1',1),
        (52, 2, 'accesso2',2),
        (53, 1, 'accesso3', 3);
+
+INSERT INTO l.assegnazione(codtransazione,tempo,tipoaccesso, codrisorsa)
+VALUES (51, 4, 'accesso1',1),
+       (52, 2, 'accesso2',2),
+       (53, 1, 'accesso3', 3);

@@ -19,3 +19,12 @@ values ('rivista1', 'silvio1'),
 INSERT INTO r.articolo(doi, codf, sommario)
 values ('doi1', 'fascicolo1', 'silvio1 barra2 salernitana1'),
        ('doi2', 'fascicolo2', 'silvio1 barra2 prova2');
+
+INSERT INTO r.descrizione(parola, doi)
+values ('silvio1', 'doi1'),
+       ('silvio1', 'doi2'),
+       ('barra2', 'doi1'),
+       ('barra2', 'doi2'),
+       ('salernitana1', 'doi1'),
+       ('prova2', 'doi2');
+

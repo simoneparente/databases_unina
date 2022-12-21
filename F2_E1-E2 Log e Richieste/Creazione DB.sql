@@ -1,7 +1,7 @@
 -- DROP SCHEMA l CASCADE ;
--- CREATE SCHEMA l;
+CREATE SCHEMA IF NOT EXISTS l;
 
-CREATE TABLE l.risorsa(
+CREATE TABLE IF NOT EXISTS l.risorsa(
     CodRisorsa INTEGER  ,
     Locazione VARCHAR(50)   ,
     Valore VARCHAR(50)   ,
@@ -10,7 +10,7 @@ CREATE TABLE l.risorsa(
     CONSTRAINT PK_risorsa PRIMARY KEY (CodRisorsa)
 );
 
-CREATE TABLE l.richieste(
+CREATE TABLE IF NOT EXISTS l.richieste(
     CodTransazione INTEGER   ,
     Tempo INTEGER   ,
     TipoAccesso VARCHAR(50)   ,
@@ -20,7 +20,7 @@ CREATE TABLE l.richieste(
     CONSTRAINT FK_richieste_risorsa FOREIGN KEY (CodRisorsa) REFERENCES l.risorsa(CodRisorsa)
 );
 
-CREATE TABLE l.assegnazione(
+CREATE TABLE IF NOT EXISTS  l.assegnazione(
     CodTransazione INTEGER,
     Tempo INTEGER,
     TipoAccesso VARCHAR(50),
@@ -31,7 +31,7 @@ CREATE TABLE l.assegnazione(
     CONSTRAINT FK_assegnazione_risorsa FOREIGN KEY (CodRisorsa) REFERENCES l.risorsa(CodRisorsa)
 );
 
-CREATE TABLE l.log(
+CREATE TABLE IF NOT EXISTS l.log(
     Cod INTEGER  ,
     Operazione VARCHAR(50)  ,
     CodRisorsa INTEGER  ,
