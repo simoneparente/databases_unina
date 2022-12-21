@@ -1,13 +1,14 @@
---START
-CREATE OR REPLACE PROCEDURE f.pro(stringa VARCHAR(500))  AS $$
+--ES6 MARIO PENNA
+CREATE OR REPLACE FUNCTION f.pro(IN stringa VARCHAR(500)) RETURNS VARCHAR(500) AS $$
     DECLARE
         numParoleSTR INTEGER;
         parolaSTR f.tagfoto.parola%TYPE;
         numURI INTEGER;
         cursURI CURSOR FOR SELECT DISTINCT uri FROM f.foto;
-        currentURI f.foto.uri%TYPE;
+        currentURI   f.foto.uri%TYPE;
         match INTEGER;
         output VARCHAR(500);
+        count INTEGER = 0;
     BEGIN
         numParoleSTR = regexp_count(stringa, '@') + 1;
         numURI = (SELECT Count(uri) FROM f.foto);
@@ -22,47 +23,27 @@ CREATE OR REPLACE PROCEDURE f.pro(stringa VARCHAR(500))  AS $$
             FOR j in 1..numParoleSTR LOOP
                 parolaSTR = split_part(stringa, '@', j);
                 RAISE NOTICE 'Parola Attuale Stringa: {%}', parolaSTR;
-                IF EXISTS (SELECT *
-                           FROM f.tagfoto as T NATURAL JOIN f.foto as F
-                           WHERE F.uri=currentURI AND T.parola=parolaSTR) THEN
+                IF EXISTS(SELECT * FROM f.tagfoto as T NATURAL JOIN f.foto as F
+                          WHERE F.uri = currentURI AND T.parola = parolaSTR) THEN
                     match = match + 1;
                     RAISE NOTICE 'Match: {%}', match;
                 end if;
                 IF match = numParoleSTR THEN
-                    output=CONCAT(OUTPUT, currentURI);
+                    IF count = 0 THEN
+                        output = CONCAT(OUTPUT, currentURI);
+                    ELSE
+                        output = CONCAT(OUTPUT, '@', currentURI);
+                    END IF;
                     RAISE NOTICE 'URI giusto: {%}', currentURI;
                 end if;
             end loop;
         end loop;
         RAISE NOTICE '----------------';
         RAISE NOTICE 'Output: {%}', output;
-    end;
+        RETURN output;
+end;
 $$ language plpgsql;
 
-CALL f.pro('prova11@prova12@provatabelle1e3');
+SELECT f.pro('prova11@prova12@provatabelle1e3');
 
-CALL f.pro('provatabelle1e3');
-
---TEST Query IF
-SELECT *
-FROM f.tagfoto as T NATURAL JOIN f.foto as F
-WHERE F.uri='uri2' AND T.parola='provatabelle1e3';
-
-------------------------------------------------------------------------------------------------------------------------
---SplitPart TEST
-
-SELECT split_part('prova11@prova12@provatabelle1e3', '@', 1);
-
---Per quale cazzo di ragione qui funziona?????
-CREATE OR REPLACE PROCEDURE f.test(string VARCHAR(500)) AS $$
-    DECLARE
-        test VARCHAR(500);
-    BEGIN
-        FOR j in 1..3 LOOP
-        test = split_part(string, '@', j);
-        RAISE NOTICE 'Split_Part {%}', test;
-        END LOOP;
-    end
-$$ language plpgsql;
-
-CALL f.test('prova11@prova12@provatabelle1e3');
+SELECT f.pro('provatabelle1e3');
