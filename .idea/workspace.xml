@@ -5,26 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e79169ef-3fb4-41ee-80a0-d2137a9c94e0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/F1_E3-E4 Riviste ed Articoli/NON FUNZIONANO/Davide es4 dinamico.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/F2_E1-E2 Log e Richieste/davide pt2 es 2.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/BDD.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BDD.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/F1_E5-E6 Hashtag e Foto/dynamic es 6 davide.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/a25e7acb-94c8-4593-a53c-14e09e32c83e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a25e7acb-94c8-4593-a53c-14e09e32c83e.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a25e7acb-94c8-4593-a53c-14e09e32c83e/storage_v2/_src_/database/postgres.edMnLQ/schema/cin.yIABAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a25e7acb-94c8-4593-a53c-14e09e32c83e/storage_v2/_src_/database/postgres.edMnLQ/schema/cin.yIABAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/a25e7acb-94c8-4593-a53c-14e09e32c83e/storage_v2/_src_/database/postgres.edMnLQ/schema/f.ZgAAAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a25e7acb-94c8-4593-a53c-14e09e32c83e/storage_v2/_src_/database/postgres.edMnLQ/schema/f.ZgAAAA.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a25e7acb-94c8-4593-a53c-14e09e32c83e/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a25e7acb-94c8-4593-a53c-14e09e32c83e/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a25e7acb-94c8-4593-a53c-14e09e32c83e/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a25e7acb-94c8-4593-a53c-14e09e32c83e/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a25e7acb-94c8-4593-a53c-14e09e32c83e/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a25e7acb-94c8-4593-a53c-14e09e32c83e/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/a25e7acb-94c8-4593-a53c-14e09e32c83e/storage_v2/_src_/database/postgres.edMnLQ/schema/r.cgAAAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a25e7acb-94c8-4593-a53c-14e09e32c83e/storage_v2/_src_/database/postgres.edMnLQ/schema/r.cgAAAA.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a25e7acb-94c8-4593-a53c-14e09e32c83e/storage_v2/_src_/database/postgres.edMnLQ/schema/r.cgAAAA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a25e7acb-94c8-4593-a53c-14e09e32c83e/storage_v2/_src_/database/postgres.edMnLQ/schema/r.cgAAAA.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a25e7acb-94c8-4593-a53c-14e09e32c83e/storage_v2/_src_/database/postgres.edMnLQ/schema/sn.Ww4AAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a25e7acb-94c8-4593-a53c-14e09e32c83e/storage_v2/_src_/database/postgres.edMnLQ/schema/sn.Ww4AAA.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a25e7acb-94c8-4593-a53c-14e09e32c83e/storage_v2/_src_/database/postgres.edMnLQ/schema/v.dgAAAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a25e7acb-94c8-4593-a53c-14e09e32c83e/storage_v2/_src_/database/postgres.edMnLQ/schema/v.dgAAAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Esercizi pt1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Esercizi pt1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/F1_E3-E4 Riviste ed Articoli/Creazione DB e Trigger.sql" beforeDir="false" afterPath="$PROJECT_DIR$/F1_E3-E4 Riviste ed Articoli/Creazione DB e Trigger.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/F1_E3-E4 Riviste ed Articoli/Insert.sql" beforeDir="false" afterPath="$PROJECT_DIR$/F1_E3-E4 Riviste ed Articoli/Insert.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/F1_E5-E6 Hashtag e Foto/Funzione_2(ES6).sql" beforeDir="false" afterPath="$PROJECT_DIR$/F1_E5-E6 Hashtag e Foto/Funzione_2(ES6).sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/F2_E1-E2 Log e Richieste/Creazione DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/F2_E1-E2 Log e Richieste/Creazione DB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/F2_E1-E2 Log e Richieste/Insert.sql" beforeDir="false" afterPath="$PROJECT_DIR$/F2_E1-E2 Log e Richieste/Insert.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +58,11 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="dd3cfc47-5171-400a-8c88-aaacb4b71790">
           <value>
             <State>

@@ -12,9 +12,9 @@
         <introspection-scope>
           <node kind="database" qname="postgres">
             <node kind="schema">
+              <name qname="f" />
               <name qname="l" />
               <name qname="r" />
-              <name qname="f" />
               <name qname="public" />
             </node>
           </node>
