@@ -7,7 +7,7 @@ una risorsa assegnata alla transazione T1). La funzione restituisce una stringa 
 transazioni T1 in deadlock cosi trovate
  */
 
-CREATE OR REPLACE PROCEDURE l.funzione2(Tout INTEGER) AS
+CREATE OR REPLACE PROCEDURE l.funzione2(IN Tout INTEGER) AS
 $$
     DECLARE
         tattuale INTEGER=5; --sono le 5
