@@ -1,6 +1,11 @@
+<<<<<<< HEAD
+--DROP SCHEMA r CASCADE ;
+CREATE SCHEMA r;
+=======
 
 --DROP SCHEMA r CASCADE ;
 CREATE SCHEMA IF NOT EXISTS r;
+>>>>>>> refs/remotes/origin/main
 
 CREATE TABLE r.rivista (
     isnn VARCHAR(32),

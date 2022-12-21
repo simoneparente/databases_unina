@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.45">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>1153</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1256</IntrospectionStateNumber>
       <ServerVersion>15.1</ServerVersion>
       <StartupTime>1671552830</StartupTime>
       <TimeZones>true ACDT
@@ -801,7 +801,7 @@ false Zulu
 13449||10|C|G
 13449||-9223372036854775808|U|G
 13449||10|U|G</Grants>
-      <IntrospectionStateNumber>1153</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1256</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4215,9 +4215,9 @@ false Zulu
       <ValidatorSchema>pg_catalog</ValidatorSchema>
     </language>
     <schema id="260" parent="2" name="f">
-      <IntrospectionStateNumber>1153</IntrospectionStateNumber>
-      <ObjectId>16507</ObjectId>
-      <StateNumber>764</StateNumber>
+      <IntrospectionStateNumber>1256</IntrospectionStateNumber>
+      <ObjectId>17086</ObjectId>
+      <StateNumber>1180</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
     <schema id="261" parent="2" name="information_schema">
@@ -4226,7 +4226,7 @@ false Zulu
       <OwnerName>postgres</OwnerName>
     </schema>
     <schema id="262" parent="2" name="l">
-      <IntrospectionStateNumber>1153</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1256</IntrospectionStateNumber>
       <ObjectId>17047</ObjectId>
       <StateNumber>1096</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -5416,78 +5416,78 @@ false Zulu
     <schema id="264" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>1153</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1256</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
     <schema id="265" parent="2" name="r">
-      <IntrospectionStateNumber>1153</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1256</IntrospectionStateNumber>
       <ObjectId>16847</ObjectId>
       <StateNumber>881</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
-    <routine id="266" parent="260" name="prova1">
-      <ArgumentsDefinition>IN input character varying</ArgumentsDefinition>
-      <ObjectId>16611</ObjectId>
-      <PgRoutineKind>pg-procedure</PgRoutineKind>
+    <routine id="266" parent="260" name="try">
+      <ArgumentsDefinition>input text</ArgumentsDefinition>
+      <ObjectId>17190</ObjectId>
+      <ResultsDefinition>text</ResultsDefinition>
       <Rows>0.0</Rows>
-      <SourceTextLength>1428</SourceTextLength>
-      <StateNumber>784</StateNumber>
+      <SourceTextLength>1246</SourceTextLength>
+      <StateNumber>1255</StateNumber>
       <LanguageName>plpgsql</LanguageName>
       <OwnerName>postgres</OwnerName>
     </routine>
     <sequence id="267" parent="260" name="foto_codf_seq">
       <DasType>integer|0s</DasType>
-      <ObjectId>16528</ObjectId>
-      <StateNumber>768</StateNumber>
+      <ObjectId>17107</ObjectId>
+      <StateNumber>1184</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <table id="268" parent="260" name="album">
-      <ObjectId>16518</ObjectId>
-      <StateNumber>767</StateNumber>
+      <ObjectId>17097</ObjectId>
+      <StateNumber>1183</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="269" parent="260" name="foto">
-      <ObjectId>16529</ObjectId>
-      <StateNumber>768</StateNumber>
+      <ObjectId>17108</ObjectId>
+      <StateNumber>1184</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="270" parent="260" name="hashtag">
-      <ObjectId>16508</ObjectId>
-      <StateNumber>769</StateNumber>
+      <ObjectId>17087</ObjectId>
+      <StateNumber>1185</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="271" parent="260" name="log">
-      <ObjectId>16580</ObjectId>
-      <StateNumber>771</StateNumber>
+      <ObjectId>17159</ObjectId>
+      <StateNumber>1187</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="272" parent="260" name="tagalbum">
-      <ObjectId>16595</ObjectId>
-      <StateNumber>772</StateNumber>
+      <ObjectId>17174</ObjectId>
+      <StateNumber>1188</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="273" parent="260" name="tagfoto">
-      <ObjectId>16545</ObjectId>
-      <StateNumber>769</StateNumber>
+      <ObjectId>17124</ObjectId>
+      <StateNumber>1185</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="274" parent="260" name="utente">
-      <ObjectId>16513</ObjectId>
-      <StateNumber>767</StateNumber>
+      <ObjectId>17092</ObjectId>
+      <StateNumber>1183</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="275" parent="260" name="visibile">
-      <ObjectId>16560</ObjectId>
-      <StateNumber>770</StateNumber>
+      <ObjectId>17139</ObjectId>
+      <StateNumber>1186</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -5613,271 +5613,275 @@ false Zulu
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <argument id="293" parent="266" name="input">
-      <DasType>varchar|0s</DasType>
+    <argument id="293" parent="266">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DasType>text|0s</DasType>
+    </argument>
+    <argument id="294" parent="266" name="input">
+      <DasType>text|0s</DasType>
       <Position>1</Position>
     </argument>
-    <column id="294" parent="268" name="coda">
+    <column id="295" parent="268" name="coda">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>767</StateNumber>
+      <StateNumber>1183</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="295" parent="268" name="nome">
+    <column id="296" parent="268" name="nome">
       <DasType>varchar(50)|0s</DasType>
       <Position>2</Position>
-      <StateNumber>767</StateNumber>
+      <StateNumber>1183</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="296" parent="268" name="titolo">
+    <column id="297" parent="268" name="titolo">
       <DasType>varchar(50)|0s</DasType>
       <Position>3</Position>
-      <StateNumber>767</StateNumber>
+      <StateNumber>1183</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="297" parent="268" name="owner">
+    <column id="298" parent="268" name="owner">
       <DasType>integer|0s</DasType>
       <Position>4</Position>
-      <StateNumber>767</StateNumber>
+      <StateNumber>1183</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="298" parent="268" name="inalbum">
+    <column id="299" parent="268" name="inalbum">
       <DasType>integer|0s</DasType>
       <Position>5</Position>
-      <StateNumber>767</StateNumber>
+      <StateNumber>1183</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="299" parent="268" name="utente_fk">
+    <foreign-key id="300" parent="268" name="utente_fk">
       <ColNames>owner</ColNames>
-      <ObjectId>16523</ObjectId>
+      <ObjectId>17102</ObjectId>
       <RefColNames>codu</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>767</StateNumber>
-      <RefTableId>16513</RefTableId>
+      <StateNumber>1183</StateNumber>
+      <RefTableId>17092</RefTableId>
       <RefTableName>utente</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="300" parent="268" name="album_pk">
+    <index id="301" parent="268" name="album_pk">
       <ColNames>coda</ColNames>
-      <ObjectId>16521</ObjectId>
+      <ObjectId>17100</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>767</StateNumber>
+      <StateNumber>1183</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="301" parent="268" name="album_pk">
-      <ObjectId>16522</ObjectId>
+    <key id="302" parent="268" name="album_pk">
+      <ObjectId>17101</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>767</StateNumber>
-      <UnderlyingIndexId>16521</UnderlyingIndexId>
+      <StateNumber>1183</StateNumber>
+      <UnderlyingIndexId>17100</UnderlyingIndexId>
     </key>
-    <column id="302" parent="269" name="codf">
+    <column id="303" parent="269" name="codf">
       <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;f.foto_codf_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>768</StateNumber>
-      <SequenceId>16528</SequenceId>
+      <StateNumber>1184</StateNumber>
+      <SequenceId>17107</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="303" parent="269" name="uri">
+    <column id="304" parent="269" name="uri">
       <DasType>varchar(100)|0s</DasType>
       <Position>2</Position>
-      <StateNumber>768</StateNumber>
+      <StateNumber>1184</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="304" parent="269" name="titolo">
+    <column id="305" parent="269" name="titolo">
       <DasType>varchar(50)|0s</DasType>
       <Position>3</Position>
-      <StateNumber>768</StateNumber>
+      <StateNumber>1184</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="305" parent="269" name="owner">
+    <column id="306" parent="269" name="owner">
       <DasType>integer|0s</DasType>
       <Position>4</Position>
-      <StateNumber>768</StateNumber>
+      <StateNumber>1184</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="306" parent="269" name="codalbum">
+    <column id="307" parent="269" name="codalbum">
       <DasType>integer|0s</DasType>
       <Position>5</Position>
-      <StateNumber>768</StateNumber>
+      <StateNumber>1184</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="307" parent="269" name="aggiunta">
+    <column id="308" parent="269" name="aggiunta">
       <DasType>timestamp|0s</DasType>
       <Position>6</Position>
-      <StateNumber>768</StateNumber>
+      <StateNumber>1184</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="308" parent="269" name="rimossa">
+    <column id="309" parent="269" name="rimossa">
       <DasType>timestamp|0s</DasType>
       <Position>7</Position>
-      <StateNumber>768</StateNumber>
+      <StateNumber>1184</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <foreign-key id="309" parent="269" name="utente_fk">
+    <foreign-key id="310" parent="269" name="utente_fk">
       <ColNames>owner</ColNames>
-      <ObjectId>16540</ObjectId>
+      <ObjectId>17119</ObjectId>
       <RefColNames>codu</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>768</StateNumber>
-      <RefTableId>16513</RefTableId>
+      <StateNumber>1184</StateNumber>
+      <RefTableId>17092</RefTableId>
       <RefTableName>utente</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="310" parent="269" name="album_fk">
+    <foreign-key id="311" parent="269" name="album_fk">
       <ColNames>codalbum</ColNames>
-      <ObjectId>16535</ObjectId>
+      <ObjectId>17114</ObjectId>
       <RefColNames>coda</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>768</StateNumber>
-      <RefTableId>16518</RefTableId>
+      <StateNumber>1184</StateNumber>
+      <RefTableId>17097</RefTableId>
       <RefTableName>album</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="311" parent="269" name="foto_pk">
+    <index id="312" parent="269" name="foto_pk">
       <ColNames>codf</ColNames>
-      <ObjectId>16533</ObjectId>
+      <ObjectId>17112</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>768</StateNumber>
+      <StateNumber>1184</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="312" parent="269" name="foto_pk">
-      <ObjectId>16534</ObjectId>
+    <key id="313" parent="269" name="foto_pk">
+      <ObjectId>17113</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>768</StateNumber>
-      <UnderlyingIndexId>16533</UnderlyingIndexId>
+      <StateNumber>1184</StateNumber>
+      <UnderlyingIndexId>17112</UnderlyingIndexId>
     </key>
-    <column id="313" parent="270" name="parola">
+    <column id="314" parent="270" name="parola">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>765</StateNumber>
+      <StateNumber>1181</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="314" parent="270" name="hashtag_pk">
+    <index id="315" parent="270" name="hashtag_pk">
       <ColNames>parola</ColNames>
-      <ObjectId>16511</ObjectId>
+      <ObjectId>17090</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>765</StateNumber>
+      <StateNumber>1181</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="315" parent="270" name="hashtag_pk">
-      <ObjectId>16512</ObjectId>
+    <key id="316" parent="270" name="hashtag_pk">
+      <ObjectId>17091</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>765</StateNumber>
-      <UnderlyingIndexId>16511</UnderlyingIndexId>
+      <StateNumber>1181</StateNumber>
+      <UnderlyingIndexId>17090</UnderlyingIndexId>
     </key>
-    <column id="316" parent="271" name="codu">
+    <column id="317" parent="271" name="codu">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>771</StateNumber>
+      <StateNumber>1187</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="317" parent="271" name="codf">
+    <column id="318" parent="271" name="codf">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>771</StateNumber>
+      <StateNumber>1187</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="318" parent="271" name="time">
+    <column id="319" parent="271" name="time">
       <DasType>timestamp|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>771</StateNumber>
+      <StateNumber>1187</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="319" parent="271" name="operation">
+    <column id="320" parent="271" name="operation">
       <DasType>varchar(50)|0s</DasType>
       <Position>4</Position>
-      <StateNumber>771</StateNumber>
+      <StateNumber>1187</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="320" parent="271" name="utente_fk">
+    <foreign-key id="321" parent="271" name="utente_fk">
       <ColNames>codu</ColNames>
-      <ObjectId>16585</ObjectId>
+      <ObjectId>17164</ObjectId>
       <RefColNames>codu</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>771</StateNumber>
-      <RefTableId>16513</RefTableId>
+      <StateNumber>1187</StateNumber>
+      <RefTableId>17092</RefTableId>
       <RefTableName>utente</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="321" parent="271" name="foto_fk">
+    <foreign-key id="322" parent="271" name="foto_fk">
       <ColNames>codf</ColNames>
-      <ObjectId>16590</ObjectId>
+      <ObjectId>17169</ObjectId>
       <RefColNames>codf</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>771</StateNumber>
-      <RefTableId>16529</RefTableId>
+      <StateNumber>1187</StateNumber>
+      <RefTableId>17108</RefTableId>
       <RefTableName>foto</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="322" parent="271" name="log_pk">
+    <index id="323" parent="271" name="log_pk">
       <ColNames>codu
 codf
 time</ColNames>
-      <ObjectId>16583</ObjectId>
+      <ObjectId>17162</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>771</StateNumber>
+      <StateNumber>1187</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="323" parent="271" name="log_pk">
-      <ObjectId>16584</ObjectId>
+    <key id="324" parent="271" name="log_pk">
+      <ObjectId>17163</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>771</StateNumber>
-      <UnderlyingIndexId>16583</UnderlyingIndexId>
+      <StateNumber>1187</StateNumber>
+      <UnderlyingIndexId>17162</UnderlyingIndexId>
     </key>
-    <column id="324" parent="272" name="coda">
+    <column id="325" parent="272" name="coda">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>772</StateNumber>
+      <StateNumber>1188</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="325" parent="272" name="parola">
+    <column id="326" parent="272" name="parola">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>772</StateNumber>
+      <StateNumber>1188</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="326" parent="272" name="album_fk">
+    <foreign-key id="327" parent="272" name="album_fk">
       <ColNames>coda</ColNames>
-      <ObjectId>16600</ObjectId>
+      <ObjectId>17179</ObjectId>
       <RefColNames>coda</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>772</StateNumber>
-      <RefTableId>16518</RefTableId>
+      <StateNumber>1188</StateNumber>
+      <RefTableId>17097</RefTableId>
       <RefTableName>album</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="327" parent="272" name="hashtag_fk">
+    <foreign-key id="328" parent="272" name="hashtag_fk">
       <ColNames>parola</ColNames>
-      <ObjectId>16605</ObjectId>
+      <ObjectId>17184</ObjectId>
       <RefColNames>parola</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>772</StateNumber>
-      <RefTableId>16508</RefTableId>
+      <StateNumber>1188</StateNumber>
+      <RefTableId>17087</RefTableId>
       <RefTableName>hashtag</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="328" parent="272" name="tagalbum_pk">
+    <index id="329" parent="272" name="tagalbum_pk">
       <ColNames>coda
 parola</ColNames>
-      <ObjectId>16598</ObjectId>
+      <ObjectId>17177</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>772</StateNumber>
+      <StateNumber>1188</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationIds>
@@ -5887,52 +5891,52 @@ pg_catalog</CollationParentNames>
       <CollationNames>
 default</CollationNames>
     </index>
-    <key id="329" parent="272" name="tagalbum_pk">
-      <ObjectId>16599</ObjectId>
+    <key id="330" parent="272" name="tagalbum_pk">
+      <ObjectId>17178</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>772</StateNumber>
-      <UnderlyingIndexId>16598</UnderlyingIndexId>
+      <StateNumber>1188</StateNumber>
+      <UnderlyingIndexId>17177</UnderlyingIndexId>
     </key>
-    <column id="330" parent="273" name="codf">
+    <column id="331" parent="273" name="codf">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>769</StateNumber>
+      <StateNumber>1185</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="331" parent="273" name="parola">
+    <column id="332" parent="273" name="parola">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>769</StateNumber>
+      <StateNumber>1185</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="332" parent="273" name="foto_fk">
+    <foreign-key id="333" parent="273" name="foto_fk">
       <ColNames>codf</ColNames>
-      <ObjectId>16550</ObjectId>
+      <ObjectId>17129</ObjectId>
       <RefColNames>codf</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>769</StateNumber>
-      <RefTableId>16529</RefTableId>
+      <StateNumber>1185</StateNumber>
+      <RefTableId>17108</RefTableId>
       <RefTableName>foto</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="333" parent="273" name="hashtag_fk">
+    <foreign-key id="334" parent="273" name="hashtag_fk">
       <ColNames>parola</ColNames>
-      <ObjectId>16555</ObjectId>
+      <ObjectId>17134</ObjectId>
       <RefColNames>parola</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>769</StateNumber>
-      <RefTableId>16508</RefTableId>
+      <StateNumber>1185</StateNumber>
+      <RefTableId>17087</RefTableId>
       <RefTableName>hashtag</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="334" parent="273" name="tagfoto_pk">
+    <index id="335" parent="273" name="tagfoto_pk">
       <ColNames>codf
 parola</ColNames>
-      <ObjectId>16548</ObjectId>
+      <ObjectId>17127</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>769</StateNumber>
+      <StateNumber>1185</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationIds>
@@ -5942,151 +5946,151 @@ pg_catalog</CollationParentNames>
       <CollationNames>
 default</CollationNames>
     </index>
-    <key id="335" parent="273" name="tagfoto_pk">
-      <ObjectId>16549</ObjectId>
+    <key id="336" parent="273" name="tagfoto_pk">
+      <ObjectId>17128</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>769</StateNumber>
-      <UnderlyingIndexId>16548</UnderlyingIndexId>
+      <StateNumber>1185</StateNumber>
+      <UnderlyingIndexId>17127</UnderlyingIndexId>
     </key>
-    <column id="336" parent="274" name="codu">
+    <column id="337" parent="274" name="codu">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>766</StateNumber>
+      <StateNumber>1182</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="337" parent="274" name="nome">
+    <column id="338" parent="274" name="nome">
       <DasType>varchar(50)|0s</DasType>
       <Position>2</Position>
-      <StateNumber>766</StateNumber>
+      <StateNumber>1182</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="338" parent="274" name="cognome">
+    <column id="339" parent="274" name="cognome">
       <DasType>varchar(50)|0s</DasType>
       <Position>3</Position>
-      <StateNumber>766</StateNumber>
+      <StateNumber>1182</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="339" parent="274" name="email">
+    <column id="340" parent="274" name="email">
       <DasType>varchar(50)|0s</DasType>
       <Position>4</Position>
-      <StateNumber>766</StateNumber>
+      <StateNumber>1182</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="340" parent="274" name="utente_pk">
+    <index id="341" parent="274" name="utente_pk">
       <ColNames>codu</ColNames>
-      <ObjectId>16516</ObjectId>
+      <ObjectId>17095</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>766</StateNumber>
+      <StateNumber>1182</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="341" parent="274" name="utente_pk">
-      <ObjectId>16517</ObjectId>
+    <key id="342" parent="274" name="utente_pk">
+      <ObjectId>17096</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>766</StateNumber>
-      <UnderlyingIndexId>16516</UnderlyingIndexId>
+      <StateNumber>1182</StateNumber>
+      <UnderlyingIndexId>17095</UnderlyingIndexId>
     </key>
-    <column id="342" parent="275" name="codprop">
+    <column id="343" parent="275" name="codprop">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>770</StateNumber>
+      <StateNumber>1186</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="343" parent="275" name="codut">
+    <column id="344" parent="275" name="codut">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>770</StateNumber>
+      <StateNumber>1186</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="344" parent="275" name="coda">
+    <column id="345" parent="275" name="coda">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>770</StateNumber>
+      <StateNumber>1186</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="345" parent="275" name="proprietario_fk">
+    <foreign-key id="346" parent="275" name="proprietario_fk">
       <ColNames>codprop</ColNames>
-      <ObjectId>16565</ObjectId>
+      <ObjectId>17144</ObjectId>
       <RefColNames>codu</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>770</StateNumber>
-      <RefTableId>16513</RefTableId>
+      <StateNumber>1186</StateNumber>
+      <RefTableId>17092</RefTableId>
       <RefTableName>utente</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="346" parent="275" name="utente_fk">
+    <foreign-key id="347" parent="275" name="utente_fk">
       <ColNames>codut</ColNames>
-      <ObjectId>16570</ObjectId>
+      <ObjectId>17149</ObjectId>
       <RefColNames>codu</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>770</StateNumber>
-      <RefTableId>16513</RefTableId>
+      <StateNumber>1186</StateNumber>
+      <RefTableId>17092</RefTableId>
       <RefTableName>utente</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="347" parent="275" name="album_fk">
+    <foreign-key id="348" parent="275" name="album_fk">
       <ColNames>coda</ColNames>
-      <ObjectId>16575</ObjectId>
+      <ObjectId>17154</ObjectId>
       <RefColNames>coda</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>770</StateNumber>
-      <RefTableId>16518</RefTableId>
+      <StateNumber>1186</StateNumber>
+      <RefTableId>17097</RefTableId>
       <RefTableName>album</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="348" parent="275" name="visibile_pk">
+    <index id="349" parent="275" name="visibile_pk">
       <ColNames>codprop
 codut
 coda</ColNames>
-      <ObjectId>16563</ObjectId>
+      <ObjectId>17142</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>770</StateNumber>
+      <StateNumber>1186</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="349" parent="275" name="visibile_pk">
-      <ObjectId>16564</ObjectId>
+    <key id="350" parent="275" name="visibile_pk">
+      <ObjectId>17143</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>770</StateNumber>
-      <UnderlyingIndexId>16563</UnderlyingIndexId>
+      <StateNumber>1186</StateNumber>
+      <UnderlyingIndexId>17142</UnderlyingIndexId>
     </key>
-    <argument id="350" parent="276">
+    <argument id="351" parent="276">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>text|0s</DasType>
     </argument>
-    <argument id="351" parent="276" name="tout">
+    <argument id="352" parent="276" name="tout">
       <DasType>integer|0s</DasType>
       <Position>1</Position>
     </argument>
-    <column id="352" parent="277" name="codtransazione">
+    <column id="353" parent="277" name="codtransazione">
       <DasType>integer|0s</DasType>
       <Position>1</Position>
       <StateNumber>1099</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="353" parent="277" name="tempo">
+    <column id="354" parent="277" name="tempo">
       <DasType>integer|0s</DasType>
       <Position>2</Position>
       <StateNumber>1099</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="354" parent="277" name="tipoaccesso">
+    <column id="355" parent="277" name="tipoaccesso">
       <DasType>varchar(50)|0s</DasType>
       <Position>3</Position>
       <StateNumber>1099</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="355" parent="277" name="codrisorsa">
+    <column id="356" parent="277" name="codrisorsa">
       <DasType>integer|0s</DasType>
       <Position>4</Position>
       <StateNumber>1099</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="356" parent="277" name="fk_assegnazione_risorsa">
+    <foreign-key id="357" parent="277" name="fk_assegnazione_risorsa">
       <ColNames>codrisorsa</ColNames>
       <ObjectId>17066</ObjectId>
       <RefColNames>codrisorsa</RefColNames>
@@ -6096,50 +6100,50 @@ coda</ColNames>
       <RefTableName>risorsa</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <column id="357" parent="278" name="cod">
+    <column id="358" parent="278" name="cod">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>1100</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="358" parent="278" name="operazione">
+    <column id="359" parent="278" name="operazione">
       <DasType>varchar(50)|0s</DasType>
       <Position>2</Position>
       <StateNumber>1100</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="359" parent="278" name="codrisorsa">
+    <column id="360" parent="278" name="codrisorsa">
       <DasType>integer|0s</DasType>
       <Position>3</Position>
       <StateNumber>1100</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="360" parent="278" name="valoreprima">
+    <column id="361" parent="278" name="valoreprima">
       <DasType>varchar(50)|0s</DasType>
       <Position>4</Position>
       <StateNumber>1100</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="361" parent="278" name="valoredopo">
+    <column id="362" parent="278" name="valoredopo">
       <DasType>varchar(50)|0s</DasType>
       <Position>5</Position>
       <StateNumber>1100</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="362" parent="278" name="codtransazione">
+    <column id="363" parent="278" name="codtransazione">
       <DasType>integer|0s</DasType>
       <Position>6</Position>
       <StateNumber>1100</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="363" parent="278" name="timestamp">
+    <column id="364" parent="278" name="timestamp">
       <DasType>integer|0s</DasType>
       <Position>7</Position>
       <StateNumber>1100</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="364" parent="278" name="risorse_fk">
+    <foreign-key id="365" parent="278" name="risorse_fk">
       <ColNames>codrisorsa</ColNames>
       <ObjectId>17076</ObjectId>
       <RefColNames>codrisorsa</RefColNames>
@@ -6149,7 +6153,7 @@ coda</ColNames>
       <RefTableName>risorsa</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="365" parent="278" name="log_pk">
+    <index id="366" parent="278" name="log_pk">
       <ColNames>cod</ColNames>
       <ObjectId>17074</ObjectId>
       <Primary>1</Primary>
@@ -6157,38 +6161,38 @@ coda</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="366" parent="278" name="log_pk">
+    <key id="367" parent="278" name="log_pk">
       <ObjectId>17075</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1100</StateNumber>
       <UnderlyingIndexId>17074</UnderlyingIndexId>
     </key>
-    <column id="367" parent="279" name="codtransazione">
+    <column id="368" parent="279" name="codtransazione">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>1098</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="368" parent="279" name="tempo">
+    <column id="369" parent="279" name="tempo">
       <DasType>integer|0s</DasType>
       <Position>2</Position>
       <StateNumber>1098</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="369" parent="279" name="tipoaccesso">
+    <column id="370" parent="279" name="tipoaccesso">
       <DasType>varchar(50)|0s</DasType>
       <Position>3</Position>
       <StateNumber>1098</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="370" parent="279" name="codrisorsa">
+    <column id="371" parent="279" name="codrisorsa">
       <DasType>integer|0s</DasType>
       <Position>4</Position>
       <StateNumber>1098</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="371" parent="279" name="fk_richieste_risorsa">
+    <foreign-key id="372" parent="279" name="fk_richieste_risorsa">
       <ColNames>codrisorsa</ColNames>
       <ObjectId>17058</ObjectId>
       <RefColNames>codrisorsa</RefColNames>
@@ -6198,7 +6202,7 @@ coda</ColNames>
       <RefTableName>risorsa</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="372" parent="279" name="pk_richieste">
+    <index id="373" parent="279" name="pk_richieste">
       <ColNames>codtransazione</ColNames>
       <ObjectId>17056</ObjectId>
       <Primary>1</Primary>
@@ -6206,38 +6210,38 @@ coda</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="373" parent="279" name="pk_richieste">
+    <key id="374" parent="279" name="pk_richieste">
       <ObjectId>17057</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1098</StateNumber>
       <UnderlyingIndexId>17056</UnderlyingIndexId>
     </key>
-    <column id="374" parent="280" name="codrisorsa">
+    <column id="375" parent="280" name="codrisorsa">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>1097</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="375" parent="280" name="locazione">
+    <column id="376" parent="280" name="locazione">
       <DasType>varchar(50)|0s</DasType>
       <Position>2</Position>
       <StateNumber>1097</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="376" parent="280" name="valore">
+    <column id="377" parent="280" name="valore">
       <DasType>varchar(50)|0s</DasType>
       <Position>3</Position>
       <StateNumber>1097</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="377" parent="280" name="stato">
+    <column id="378" parent="280" name="stato">
       <DasType>varchar(50)|0s</DasType>
       <Position>4</Position>
       <StateNumber>1097</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="378" parent="280" name="pk_risorsa">
+    <index id="379" parent="280" name="pk_risorsa">
       <ColNames>codrisorsa</ColNames>
       <ObjectId>17051</ObjectId>
       <Primary>1</Primary>
@@ -6245,62 +6249,62 @@ coda</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="379" parent="280" name="pk_risorsa">
+    <key id="380" parent="280" name="pk_risorsa">
       <ObjectId>17052</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1097</StateNumber>
       <UnderlyingIndexId>17051</UnderlyingIndexId>
     </key>
-    <argument id="380" parent="281">
+    <argument id="381" parent="281">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>text|0s</DasType>
     </argument>
-    <argument id="381" parent="281" name="myinput">
+    <argument id="382" parent="281" name="myinput">
       <DasType>text|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="382" parent="282">
+    <argument id="383" parent="282">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>varchar|0s</DasType>
     </argument>
-    <argument id="383" parent="282" name="myinput">
+    <argument id="384" parent="282" name="myinput">
       <DasType>varchar|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="384" parent="283">
+    <argument id="385" parent="283">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>text|0s</DasType>
     </argument>
-    <argument id="385" parent="283" name="myinput">
+    <argument id="386" parent="283" name="myinput">
       <DasType>text|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="386" parent="284">
+    <argument id="387" parent="284">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>trigger|0s</DasType>
     </argument>
-    <column id="387" parent="285" name="cf">
+    <column id="388" parent="285" name="cf">
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>953</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="388" parent="285" name="doi">
+    <column id="389" parent="285" name="doi">
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>953</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="389" parent="285" name="data">
+    <column id="390" parent="285" name="data">
       <DasType>date|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>953</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <foreign-key id="390" parent="285" name="fk_accesso_utente">
+    <foreign-key id="391" parent="285" name="fk_accesso_utente">
       <ColNames>cf</ColNames>
       <ObjectId>16976</ObjectId>
       <RefColNames>cf</RefColNames>
@@ -6310,7 +6314,7 @@ coda</ColNames>
       <RefTableName>utente</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="391" parent="285" name="fk_accesso_articolo">
+    <foreign-key id="392" parent="285" name="fk_accesso_articolo">
       <ColNames>doi</ColNames>
       <ObjectId>16971</ObjectId>
       <RefColNames>doi</RefColNames>
@@ -6320,7 +6324,7 @@ coda</ColNames>
       <RefTableName>articolo</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="392" parent="285" name="pk_accesso">
+    <index id="393" parent="285" name="pk_accesso">
       <ColNames>cf
 doi
 data</ColNames>
@@ -6336,56 +6340,56 @@ default</CollationNames>
       <CollationParentNames>pg_catalog
 pg_catalog</CollationParentNames>
     </index>
-    <key id="393" parent="285" name="pk_accesso">
+    <key id="394" parent="285" name="pk_accesso">
       <ObjectId>16970</ObjectId>
       <Primary>1</Primary>
       <StateNumber>953</StateNumber>
       <UnderlyingIndexId>16969</UnderlyingIndexId>
     </key>
-    <column id="394" parent="286" name="doi">
+    <column id="395" parent="286" name="doi">
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>950</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="395" parent="286" name="codf">
+    <column id="396" parent="286" name="codf">
       <DasType>varchar(32)|0s</DasType>
       <Position>2</Position>
       <StateNumber>950</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="396" parent="286" name="titolo">
+    <column id="397" parent="286" name="titolo">
       <DasType>varchar(32)|0s</DasType>
       <Position>3</Position>
       <StateNumber>950</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="397" parent="286" name="autore">
+    <column id="398" parent="286" name="autore">
       <DasType>varchar(32)|0s</DasType>
       <Position>4</Position>
       <StateNumber>950</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="398" parent="286" name="sommario">
+    <column id="399" parent="286" name="sommario">
       <DasType>varchar(32)|0s</DasType>
       <Position>5</Position>
       <StateNumber>950</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="399" parent="286" name="pagi">
+    <column id="400" parent="286" name="pagi">
       <DasType>integer|0s</DasType>
       <Position>6</Position>
       <StateNumber>950</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="400" parent="286" name="pagf">
+    <column id="401" parent="286" name="pagf">
       <DasType>integer|0s</DasType>
       <Position>7</Position>
       <StateNumber>950</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="401" parent="286" name="fk_articolo_rivista">
+    <foreign-key id="402" parent="286" name="fk_articolo_rivista">
       <ColNames>codf</ColNames>
       <ObjectId>16946</ObjectId>
       <RefColNames>codf</RefColNames>
@@ -6395,7 +6399,7 @@ pg_catalog</CollationParentNames>
       <RefTableName>fascicolo</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="402" parent="286" name="pk_articolo">
+    <index id="403" parent="286" name="pk_articolo">
       <ColNames>doi</ColNames>
       <ObjectId>16944</ObjectId>
       <Primary>1</Primary>
@@ -6406,32 +6410,32 @@ pg_catalog</CollationParentNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="403" parent="286" name="pk_articolo">
+    <key id="404" parent="286" name="pk_articolo">
       <ObjectId>16945</ObjectId>
       <Primary>1</Primary>
       <StateNumber>950</StateNumber>
       <UnderlyingIndexId>16944</UnderlyingIndexId>
     </key>
-    <trigger id="404" parent="286" name="trigg_1">
+    <trigger id="405" parent="286" name="trigg_1">
       <Events>I</Events>
       <ObjectId>16999</ObjectId>
       <StateNumber>957</StateNumber>
       <Turn>after-row</Turn>
       <CallRoutineId>16923</CallRoutineId>
     </trigger>
-    <column id="405" parent="287" name="parola">
+    <column id="406" parent="287" name="parola">
       <DasType>varchar(32)|0s</DasType>
       <Position>1</Position>
       <StateNumber>954</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="406" parent="287" name="doi">
+    <column id="407" parent="287" name="doi">
       <DasType>varchar(32)|0s</DasType>
       <Position>2</Position>
       <StateNumber>954</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="407" parent="287" name="fk_descrizione_articolodoc">
+    <foreign-key id="408" parent="287" name="fk_descrizione_articolodoc">
       <ColNames>doi</ColNames>
       <ObjectId>16984</ObjectId>
       <RefColNames>doi</RefColNames>
@@ -6441,32 +6445,32 @@ pg_catalog</CollationParentNames>
       <RefTableName>articolo</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <column id="408" parent="288" name="codf">
+    <column id="409" parent="288" name="codf">
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>949</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="409" parent="288" name="isnn">
+    <column id="410" parent="288" name="isnn">
       <DasType>varchar(32)|0s</DasType>
       <Position>2</Position>
       <StateNumber>949</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="410" parent="288" name="numero">
+    <column id="411" parent="288" name="numero">
       <DasType>integer|0s</DasType>
       <Position>3</Position>
       <StateNumber>949</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="411" parent="288" name="anno">
+    <column id="412" parent="288" name="anno">
       <DasType>integer|0s</DasType>
       <Position>4</Position>
       <StateNumber>949</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="412" parent="288" name="fk_fascicolo_rivista">
+    <foreign-key id="413" parent="288" name="fk_fascicolo_rivista">
       <ColNames>isnn</ColNames>
       <ObjectId>16936</ObjectId>
       <RefColNames>isnn</RefColNames>
@@ -6476,7 +6480,7 @@ pg_catalog</CollationParentNames>
       <RefTableName>rivista</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="413" parent="288" name="pk_fascicolo">
+    <index id="414" parent="288" name="pk_fascicolo">
       <ColNames>codf</ColNames>
       <ObjectId>16934</ObjectId>
       <Primary>1</Primary>
@@ -6487,27 +6491,27 @@ pg_catalog</CollationParentNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="414" parent="288" name="pk_fascicolo">
+    <key id="415" parent="288" name="pk_fascicolo">
       <ObjectId>16935</ObjectId>
       <Primary>1</Primary>
       <StateNumber>949</StateNumber>
       <UnderlyingIndexId>16934</UnderlyingIndexId>
     </key>
-    <column id="415" parent="289" name="parola">
+    <column id="416" parent="289" name="parola">
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>955</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="416" parent="289" name="isnn">
+    <column id="417" parent="289" name="isnn">
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>955</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="417" parent="289" name="fk_parolechiave_">
+    <foreign-key id="418" parent="289" name="fk_parolechiave_">
       <ColNames>isnn</ColNames>
       <ObjectId>16994</ObjectId>
       <RefColNames>isnn</RefColNames>
@@ -6517,7 +6521,7 @@ pg_catalog</CollationParentNames>
       <RefTableName>rivista</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="418" parent="289" name="pk_parolechiave">
+    <index id="419" parent="289" name="pk_parolechiave">
       <ColNames>parola
 isnn</ColNames>
       <ObjectId>16992</ObjectId>
@@ -6532,38 +6536,38 @@ default</CollationNames>
       <CollationParentNames>pg_catalog
 pg_catalog</CollationParentNames>
     </index>
-    <key id="419" parent="289" name="pk_parolechiave">
+    <key id="420" parent="289" name="pk_parolechiave">
       <ObjectId>16993</ObjectId>
       <Primary>1</Primary>
       <StateNumber>955</StateNumber>
       <UnderlyingIndexId>16992</UnderlyingIndexId>
     </key>
-    <column id="420" parent="290" name="codprofilo">
+    <column id="421" parent="290" name="codprofilo">
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>951</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="421" parent="290" name="tipo">
+    <column id="422" parent="290" name="tipo">
       <DasType>varchar(32)|0s</DasType>
       <Position>2</Position>
       <StateNumber>951</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="422" parent="290" name="maxgiorno">
+    <column id="423" parent="290" name="maxgiorno">
       <DasType>integer|0s</DasType>
       <Position>3</Position>
       <StateNumber>951</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="423" parent="290" name="maxmese">
+    <column id="424" parent="290" name="maxmese">
       <DasType>integer|0s</DasType>
       <Position>4</Position>
       <StateNumber>951</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="424" parent="290" name="pk_profilo">
+    <index id="425" parent="290" name="pk_profilo">
       <ColNames>codprofilo</ColNames>
       <ObjectId>16954</ObjectId>
       <Primary>1</Primary>
@@ -6574,38 +6578,38 @@ pg_catalog</CollationParentNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="425" parent="290" name="pk_profilo">
+    <key id="426" parent="290" name="pk_profilo">
       <ObjectId>16955</ObjectId>
       <Primary>1</Primary>
       <StateNumber>951</StateNumber>
       <UnderlyingIndexId>16954</UnderlyingIndexId>
     </key>
-    <column id="426" parent="291" name="isnn">
+    <column id="427" parent="291" name="isnn">
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>948</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="427" parent="291" name="titolo">
+    <column id="428" parent="291" name="titolo">
       <DasType>varchar(32)|0s</DasType>
       <Position>2</Position>
       <StateNumber>948</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="428" parent="291" name="editore">
+    <column id="429" parent="291" name="editore">
       <DasType>varchar(32)|0s</DasType>
       <Position>3</Position>
       <StateNumber>948</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="429" parent="291" name="periodicita">
+    <column id="430" parent="291" name="periodicita">
       <DasType>varchar(32)|0s</DasType>
       <Position>4</Position>
       <StateNumber>948</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="430" parent="291" name="pk_rivista">
+    <index id="431" parent="291" name="pk_rivista">
       <ColNames>isnn</ColNames>
       <ObjectId>16929</ObjectId>
       <Primary>1</Primary>
@@ -6616,50 +6620,50 @@ pg_catalog</CollationParentNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="431" parent="291" name="pk_rivista">
+    <key id="432" parent="291" name="pk_rivista">
       <ObjectId>16930</ObjectId>
       <Primary>1</Primary>
       <StateNumber>948</StateNumber>
       <UnderlyingIndexId>16929</UnderlyingIndexId>
     </key>
-    <column id="432" parent="292" name="cf">
+    <column id="433" parent="292" name="cf">
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>952</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="433" parent="292" name="email">
+    <column id="434" parent="292" name="email">
       <DasType>varchar(32)|0s</DasType>
       <Position>2</Position>
       <StateNumber>952</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="434" parent="292" name="codprofilo">
+    <column id="435" parent="292" name="codprofilo">
       <DasType>varchar(32)|0s</DasType>
       <Position>3</Position>
       <StateNumber>952</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="435" parent="292" name="nome">
+    <column id="436" parent="292" name="nome">
       <DasType>varchar(32)|0s</DasType>
       <Position>4</Position>
       <StateNumber>952</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="436" parent="292" name="cognome">
+    <column id="437" parent="292" name="cognome">
       <DasType>varchar(32)|0s</DasType>
       <Position>5</Position>
       <StateNumber>952</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="437" parent="292" name="datanascita">
+    <column id="438" parent="292" name="datanascita">
       <DasType>date|0s</DasType>
       <Position>6</Position>
       <StateNumber>952</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <foreign-key id="438" parent="292" name="fk_utente_profilo">
+    <foreign-key id="439" parent="292" name="fk_utente_profilo">
       <ColNames>codprofilo</ColNames>
       <ObjectId>16961</ObjectId>
       <RefColNames>codprofilo</RefColNames>
@@ -6669,7 +6673,7 @@ pg_catalog</CollationParentNames>
       <RefTableName>profilo</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="439" parent="292" name="pk_utente">
+    <index id="440" parent="292" name="pk_utente">
       <ColNames>cf</ColNames>
       <ObjectId>16959</ObjectId>
       <Primary>1</Primary>
@@ -6680,7 +6684,7 @@ pg_catalog</CollationParentNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="440" parent="292" name="pk_utente">
+    <key id="441" parent="292" name="pk_utente">
       <ObjectId>16960</ObjectId>
       <Primary>1</Primary>
       <StateNumber>952</StateNumber>
