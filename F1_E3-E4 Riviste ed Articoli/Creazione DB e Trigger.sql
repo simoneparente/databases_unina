@@ -1,5 +1,6 @@
-DROP SCHEMA r CASCADE ;
-CREATE SCHEMA r;
+
+--DROP SCHEMA r CASCADE ;
+CREATE SCHEMA IF NOT EXISTS r;
 
 CREATE TABLE r.rivista (
     isnn VARCHAR(32),
@@ -64,7 +65,7 @@ CREATE TABLE r.Descrizione
 (
     Parola VARCHAR(32),
     Doi    VARCHAR(32),
-    CONSTRAINT PK_Descrizione             PRIMARY KEY (Parola,Doi),
+    --CONSTRAINT PK_Descrizione             PRIMARY KEY (Parola,Doi),
     CONSTRAINT FK_Descrizione_Articolodoc FOREIGN KEY (Doi) REFERENCES r.Articolo (Doi)
 );
 
