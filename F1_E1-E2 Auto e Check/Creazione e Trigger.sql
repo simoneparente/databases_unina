@@ -85,7 +85,7 @@ $$
 
             IF NEW.velocita > MAXvelocita THEN
                 UPDATE v.check
-                SET infrazione = TRUE
+                SET infrazione = TRUE -- l'infrazione esiste
                 WHERE puntocheck = NEW.puntocheck
                     AND targa = NEW.targa
                     AND velocita=NEW.velocita
