@@ -1,4 +1,6 @@
 @startuml
 Title Es2 SD
-Employee -> 
+-> Employee: accreditMoney(...)
+activate Employee
+
 @enduml
