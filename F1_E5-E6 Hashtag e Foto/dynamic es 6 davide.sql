@@ -10,7 +10,7 @@ CREATE OR REPLACE FUNCTION f.try(in input text) RETURNS TEXT AS
         output text = '';
         k int:=0;
     BEGIN
-        query := '(SELECT uri FROM f.foto NATURAL JOIN f.tagfoto T WHERE T.parola = ';
+        query := '(SELECT titolo FROM libro  WHERE descrizione LIKE ;
         if n_parole = 1 then
             resultquery := query || ''''||paroleAr[1]||''''||')';
             OPEN refcur FOR EXECUTE resultquery ;
@@ -27,10 +27,10 @@ CREATE OR REPLACE FUNCTION f.try(in input text) RETURNS TEXT AS
         LOOP
             FETCH refcur INTO result;
             EXIT WHEN NOT FOUND;
-            output := output || result || '@';
+            output := output || result || ';';
         END LOOP;
         CLOSE refcur;
-        output = rtrim(output,'@');
+        output = rtrim(output,';');
         RETURN output;
     END;
     $$language plpgsql;
