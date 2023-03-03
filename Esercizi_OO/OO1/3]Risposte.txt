@@ -1,0 +1,96 @@
+A)
+
+public interface Animale{
+	void verse();
+	int compare_paws(int n);
+}
+
+public class Quadruped implements Animal{
+	int num_paws = 4;
+}
+
+class Cat extends Quadruped{
+	String name;
+	public Cat (String name){
+		this.name = name;
+	}
+	public int compare_paws(int n){
+		return this.num_paws - n;
+	}
+}
+
+
+Il codice non compila correttamente perchè:
+	• nell'interfaccia Quadruped dovrebbe essere scritto Implements e non Extends perchè le interfacce di implemtentano e non si estendono.
+	• nell'interfaccia non posso essere dichiarate variabili, quindi l'intefaccia Quadruped al massimo porebbe essere una classe
+	• nella classe Cat c'è lo stresso errore del punto 1;
+
+-------------------------------------------------------------------------
+
+B) NON è presente un overriding
+
+public interface Animale{
+	void verse();
+	int compare_paws(int n);
+}
+
+public class Quadruped implements Animal{
+	int num_paws = 4;
+}
+
+class Cat extends Quadruped{
+	String name;
+	String padrone;
+	
+	public Cat (String name){
+		this.name = name;
+	}
+
+	--Overload
+	public Cat (String name, String padrone){
+		this.padrone = padrone;
+		this.name = name;
+	}
+
+	public int compare_paws(int n){
+		return this.num_paws - n;
+	}
+}
+
+
+-------------------------------------------------------------------------
+
+C) NON è presente un overriding
+
+public interface Animale{
+	void verse();
+	int compare_paws(int n);
+	int num_fortunato(int n);
+}
+
+public class Quadruped implements Animal{
+	int num_paws = 4;
+
+	int num_fortunato(int n){
+		return 8
+	}
+}
+
+class Cat extends Quadruped{
+	String padrone;
+
+	public Cat (String name){
+		this.name = name;
+	}
+
+	public int compare_paws(int n){
+		return this.num_paws - n;
+	}
+
+	@Override
+	int num_fortunato(int n){
+		return 5
+	}
+}
+
+-------------------------------------------------------------------------

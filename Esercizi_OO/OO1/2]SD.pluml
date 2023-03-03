@@ -2,5 +2,31 @@
 Title Es2 SD
 -> Employee: accreditMoney(...)
 activate Employee
+Employee -> Bank: my_bank.is_our_customer(...)
+activate Bank
+Bank --> Employee: boolean
+deactivate Bank
 
+alt our_customer = True
+    Employee -> Bank: my_bank.getCustomert(...)
+    activate Bank
+    Bank --> Employee: Customer
+    deactivate Bank
+
+    Employee -> Customer: c.getAccouts()
+    activate Customer
+    Customer --> Employee: ArrayList<Account>
+    deactivate Customer
+
+    loop Account a : accounts
+        alt (a.account_id = account_id)
+        Employee -> Account: a.getamount()
+        activate Account
+        Account --> Employee: amount
+        deactivate Account
+        end
+    end
+end
+
+deactivate Employee
 @enduml
