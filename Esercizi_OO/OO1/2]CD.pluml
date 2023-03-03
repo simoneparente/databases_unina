@@ -3,22 +3,27 @@ title Es2 CD
 
 class Employee{
     +my_bank: Bank
-    }
+
+    bool accreditMoney(int customer_id)
+}
 
 class Bank{
-    boolean is_our_customer(customer_id)
-    Customer getCustomer(customer_id)
-    }
+    boolean is_our_customer(int customer_id)
+    Customer getCustomer(int customer_id)
+}
 
 class Customer{
-    ArrayList <Account> getAccounts(customer_id)
-    }
+    ArrayList<Account> getAccounts(int customer_id)
+}
 
 class Account{
-    account_id: String
+    account_id: int
     amount: Double
-    }
+}
 
-/' Da fare connessioni e verificare public private e cazzi'/
+Employee "1 *"--"1" Bank
+Bank "1"--"1 *" Customer
+Customer "1 *"--"1" Account
+Account "*"--"*" Employee
 
 @enduml
