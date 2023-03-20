@@ -1,0 +1,22 @@
+@startuml 
+
+class Partita{
+    String luogo
+    Timestamp data
+    double quotaPartecipazione
+    ArrayList<Giocatore> partecipanti
+    Giocatore vincitore
+}
+
+
+class Giocatore{
+
+    Partita creaPartita(String luogo, Timestamp data, double quotaPartecipazione, ArrayList<Giocatore>)
+    void setVincitore(Partita partita, Gicatore vincitore)
+    void mostraRiepilogo (Giocatore giocatore)
+}
+
+Giocatore "1" -right- "1..*" Partita : creaPartita
+Giocatore "*" -right- "2..*" Partita : partecipa
+
+@enduml
