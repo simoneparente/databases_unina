@@ -1,0 +1,25 @@
+@startuml
+class Cassa{
+    - List<sconti> sconti
+    float totale
+    Item item
+
+    + void calcolaTotale(Carrello C)
+    void calcolaPrezzo(item, sconti)
+}
+
+class Carrello{
+    List<Item> getItems()
+}
+
+class Sconti
+
+class Item 
+
+Carrello "0,*"--"0, *" Item
+Cassa "*"--"*" Sconti
+Sconti "*"-right-"1" Item
+Carrello "1"--"*" Cassa
+
+
+@enduml
