@@ -1,0 +1,12 @@
+@startuml
+autonumber
+activate Studente
+Studente -> Tirocinio ++: get_richiesta(...)
+Tirocinio --> Studente --: tirocinio
+deactivate Studente
+
+activate Commissione
+Commissione -> Tirocinio ++: accettaRichiesta(...)
+Tirocinio --> Commissione --: bool
+
+@enduml
