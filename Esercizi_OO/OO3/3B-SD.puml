@@ -1,8 +1,0 @@
-@startuml
-Giocatore -> Partita ++: creaPartita()
-return Partita
-
-Giocatore -> Partita ++: setVincitore()
-
-
-@enduml

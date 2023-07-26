@@ -1,8 +1,0 @@
-Throws si dichiara nel metodo o nella classe quando potrebbero lanciare un errore.
-Throw indica la dichiartazione di un errore
-
-public void giacomo(string nome) throwns MyException{
-	if (nome != giacomo){
-	thorw new MyException ("Nome sbagliato!!")
-	}
-}
