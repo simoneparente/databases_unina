@@ -11,7 +11,7 @@ Esercizi svolti durante il semestre invernale 2022-2023 per il corso del gruppo 
 ## Gestione e Creazione DB
 
 1. Utilizza Datagrip per gestire il Database, ti salva la vita.
-2. Quando costruisci un nuovo database, inizia con la creazione delle tabelle, prosegui poi con la definizione dei trigger per automatizzare operazioni e, infine, popola le tabelle con le INSERT.
+2. Quando costruisci un nuovo database, inizia con la creazione delle tabelle, prosegui poi con la definizione dei trigger e, infine, popola le tabelle con le INSERT.
 3. Le funzioni puoi aggiungerle alla fine.
 
 ## TODO
