@@ -1,4 +1,10 @@
---ES3 Mario Penna
+/*
+ Si implementi un trigger azionato quando viene inserito
+un nuovo articolo. Il trigger cerca la presenza nel sommario dell’articolo delle parole chiave
+associate alla rivista dell’articolo. Se viene trovata la presenza di una parola chiave questa
+viene memorizzata nella tabella DESCRIZIONE.
+ */
+ 
 CREATE OR REPLACE FUNCTION r.funz_1() RETURNS TRIGGER AS $$
     DECLARE
         word r.parolechiave.parola%TYPE;

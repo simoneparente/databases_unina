@@ -1,11 +1,5 @@
-<<<<<<< HEAD
---DROP SCHEMA r CASCADE ;
-CREATE SCHEMA r;
-=======
-
 --DROP SCHEMA r CASCADE ;
 CREATE SCHEMA IF NOT EXISTS r;
->>>>>>> refs/remotes/origin/main
 
 CREATE TABLE r.rivista (
     isnn VARCHAR(32),
@@ -14,8 +8,6 @@ CREATE TABLE r.rivista (
     periodicita VARCHAR(32),
     CONSTRAINT pk_rivista PRIMARY KEY (isnn)
 );
-
-
 CREATE TABLE r.fascicolo(
     CodF VARCHAR(32),
     isnn VARCHAR(32),
@@ -43,7 +35,6 @@ CREATE TABLE r.Profilo
     MaxMese    INTEGER,
     CONSTRAINT PK_Profilo PRIMARY KEY (CodProfilo)
 );
-
 CREATE TABLE r.Utente
 (
     CF          VARCHAR(32),
@@ -64,58 +55,16 @@ CREATE TABLE r.accesso(
     CONSTRAINT fk_accesso_articolo FOREIGN KEY (doi) REFERENCES r.articolo(doi),
     CONSTRAINT fk_accesso_utente   FOREIGN KEY (CF)  REFERENCES r.utente(CF)
 );
-
-
 CREATE TABLE r.Descrizione
 (
     Parola VARCHAR(32),
     Doi    VARCHAR(32),
-    --CONSTRAINT PK_Descrizione             PRIMARY KEY (Parola,Doi),
     CONSTRAINT FK_Descrizione_Articolodoc FOREIGN KEY (Doi) REFERENCES r.Articolo (Doi)
 );
-
 CREATE TABLE r.ParoleChiave
 (
     Parola VARCHAR(32),
     ISNN   VARCHAR(32),
-
     CONSTRAINT PK_ParoleChiave PRIMARY KEY (Parola, ISNN),
     CONSTRAINT FK_ParoleChiave_ FOREIGN KEY (ISNN) REFERENCES r.rivista(ISNN)
 );
-
-------------------------------------------------------------------------------------------------------------------------
---Trigger
-
-CREATE OR REPLACE FUNCTION r.funz_1() RETURNS TRIGGER AS
-    $$
-        DECLARE
-            word r.parolechiave.parola%TYPE;
-            cursore CURSOR FOR
-                    SELECT parola
-                    FROM r.fascicolo NATURAL JOIN r.parolechiave
-                    WHERE r.fascicolo.codf=NEW.codf;
-            i int:=0;
-            n int:=(SELECT COUNT(*)
-                   FROM r.fascicolo NATURAL JOIN r.parolechiave);
-        BEGIN
-            OPEN cursore;
-            WHILE (i<n) LOOP
-                FETCH cursore into word;
-
-                IF(NEW.sommario LIKE '%' || word || '%') THEN
-                    INSERT INTO r.descrizione(parola, doi)
-                    values (word, new.doi);
-
-                END IF;
-                i=i+1;
-
-            END LOOP;
-            CLOSE cursore;
-            RETURN NEW;
-        END ;
-    $$
-LANGUAGE plpgsql;
-
-CREATE OR REPLACE TRIGGER trigg_1 AFTER INSERT ON r.articolo
-    FOR EACH ROW
-    EXECUTE PROCEDURE r.funz_1();
