@@ -15,9 +15,9 @@ Esercizi svolti durante il semestre invernale 2022-2023 per il corso del gruppo 
 3. Le funzioni puoi aggiungerle alla fine.
 
 ## Repository a cura di:
-@simoneparente
-@bickpenna
-@lorenzotecchia
+- [Simone Parente](https://github.com/simoneparente)
+- [Mario Penna](https://github.com/bickpenna)
+- [Lorenzo Tecchia](https://github.com/lorenzotecchia)
 
 ## TODO
 
