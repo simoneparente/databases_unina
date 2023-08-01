@@ -11,7 +11,7 @@ Appunti del corso di Basi di dati scritti su Notion: [link](https://simoneparent
 
 ## Gestione e Creazione DB
 
-1. Utilizza Datagrip per gestire il Database, ti salva la vita.
+1. Utilizza [DataGrip](https://www.jetbrains.com/datagrip) per gestire il Database, ti salva la vita.
 2. Quando costruisci un nuovo database, inizia con la creazione delle tabelle, prosegui poi con la definizione dei trigger e, infine, popola le tabelle con le INSERT.
 3. Le funzioni puoi aggiungerle alla fine.
 
