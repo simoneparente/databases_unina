@@ -1,7 +1,7 @@
 /*
 Si scriva una funzione PLSQL che riceve in ingresso l’identificativo
 di un album e che restituisce una stringa contenente tutti i tag associati all’album e agli album in
-esso contenuti (ad ogni livello di profondit`a) senza ripetizioni.
+esso contenuti (ad ogni livello di profondità) senza ripetizioni.
  */
  
 CREATE OR REPLACE PROCEDURE f.f2_figli(tagalbum f.album.coda%TYPE) AS $$

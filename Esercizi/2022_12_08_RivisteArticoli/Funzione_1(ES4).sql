@@ -4,7 +4,7 @@ separate dal carattere +. La funzione restituisce la stringadi doi degli articol
 sono associate TUTTE le parole chiave nella stringa.
 */
 
---QUESTO ESERCIZIO NON È IN SQL DINAMICO PER FARLO IN SQL DINAMICO VEDI ES 6 DI 20221208HashtagFoto
+--QUESTO ESERCIZIO NON È IN SQL DINAMICO PER FARLO IN SQL DINAMICO VEDI ES 6 DI 2022_12_08_HashtagFoto
 
 CREATE OR REPLACE FUNCTION r.pro(string VARCHAR(500)) RETURNS VARCHAR(500) AS $$
     DECLARE
