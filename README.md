@@ -9,7 +9,7 @@ Esercizi svolti durante il semestre invernale 2022-2023 per il corso del gruppo 
 ## 📑 *Appunti*
 Appunti del corso di Basi di dati scritti su Notion: [link](https://simoneparente.notion.site/d7306c76270d4f6a9f0a0b3892a02aa3?v=2dfe3774303c43a0868d3b950b19a8d7)
 
-## ℹ️ Informazioni Utili
+## ℹ️ Consigli
 
 ### Gestione e Creazione DB
 1. Utilizza [DataGrip](https://www.jetbrains.com/datagrip) per gestire il Database, ti salva la vita.
