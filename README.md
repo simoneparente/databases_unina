@@ -17,7 +17,7 @@ Appunti del corso di Basi di dati scritti su Notion: [link](https://simoneparent
 3. Le funzioni puoi aggiungerle alla fine.
 
 ## ©️ *Creato da*
-- 🧑🏻‍💻  [Simone Parente Martone](https://github.com/simoneparente)
+- 🧑🏻‍💻  [Simone Parente](https://github.com/simoneparente)
 - 🧑🏻‍💻  [Mario Penna](https://github.com/bickpenna/)
 - 🧑🏻‍💻  [Lorenzo Tecchia](https://github.com/lorenzotecchia)
 
